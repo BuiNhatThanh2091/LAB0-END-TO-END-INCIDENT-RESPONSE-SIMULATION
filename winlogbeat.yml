@@ -1,0 +1,91 @@
+winlogbeat.event_logs:
+  - name: Microsoft-Windows-Sysmon/Operational
+    event_id: 1, 3, 11, 22        
+    ignore_older: 4h
+
+  - name: Microsoft-Windows-PowerShell/Operational
+    event_id: 4104                
+    ignore_older: 4h
+
+  - name: Security
+    event_id: 4624, 4625, 4663    
+    ignore_older: 4h
+
+processors:
+  - drop_event:
+      when:
+        and:
+          - equals:
+              winlog.event_id: 4663
+          - not:
+              equals:
+                winlog.event_data.ObjectName: "C:\\Users\\Thanh\\Desktop\\Day_la_du_lieu_quan_trong.txt"
+
+  - drop_event:
+      when:
+        and:
+          - equals:
+              winlog.event_id: 4104
+          - regexp:
+              winlog.event_data.ScriptBlockText: '(?is)^\s*prompt\s*$'
+
+  - drop_event:
+      when:
+        and:
+          - equals:
+              winlog.event_id: 4104
+          - or:
+              - regexp:
+                  winlog.event_data.ScriptBlockText: '(?i)^(?:\{?\s*Set-StrictMode\b)'
+              - contains:
+                  winlog.event_data.ScriptBlockText: "psreadline"
+              - contains:
+                  winlog.event_data.ScriptBlockText: "onedrive"
+              - contains:
+                  winlog.event_data.ScriptBlockText: "teams"
+              - contains:
+                  winlog.event_data.ScriptBlockText: "get-help"
+
+  - drop_event:
+      when:
+        and:
+          - equals:
+              winlog.event_id: 4624
+          - or:
+              - equals:
+                  winlog.event_data.LogonType: 2
+              - equals:
+                  winlog.event_data.LogonType: 5
+
+  - drop_event:
+      when:
+        and:
+          - equals:
+              winlog.event_id: 1
+          - or:
+              - contains:
+                  winlog.event_data.Image: "\\svchost.exe"
+              - contains:
+                  winlog.event_data.Image: "\\conhost.exe"
+              - contains:
+                  winlog.event_data.Image: "\\explorer.exe"
+
+fields_under_root: true
+fields:
+  log_source: "win10_winlogbeat"
+  asset_type: "windows_victim"
+
+output.elasticsearch:
+  enabled: false
+
+output.logstash:
+  hosts: ["10.10.10.128:5044"]
+  ssl.enabled: false
+
+logging:
+  level: info
+  to_files: true
+  files:
+    path: C:/ProgramData/winlogbeat/Logs
+    name: winlogbeat
+    keepfiles: 7
