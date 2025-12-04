@@ -1,0 +1,133 @@
+# ========== SANITY ====
+alert icmp $HOME_NET any -> $HOME_NET any ( \
+    msg:"PING with internal"; \
+    itype:8; sid:9000001; rev:2; \
+)
+
+# ========== PYTHON http.server (8080) ==========
+alert http $HOME_NET any -> $HOME_NET 8080 ( \
+    msg:"ACCESS to 8080 (candidate python http.server)"; \
+    flow:to_server,established; \
+    threshold:type limit, track by_src, count 1, seconds 60; \
+    sid:1007201; rev:5; \
+)
+alert http $HOME_NET 8080 -> $HOME_NET any ( \
+    msg:"Python http.server response (Server: SimpleHTTP)"; \
+    flow:to_client,established; \
+    http.header; content:"Server|3a| SimpleHTTP/"; nocase; \
+    threshold:type limit, track by_dst, count 1, seconds 60; \
+    sid:1007200; rev:5; \
+)
+
+# ========== MAILHOG (8025) ==========
+alert http $HOME_NET any -> $HOME_NET 8025 ( \
+    msg:"MailHog UI access (request)"; \
+    flow:to_server,established; \
+    threshold:type limit, track by_src, count 1, seconds 60; \
+    sid:1007001; rev:5; \
+)
+alert http $HOME_NET 8025 -> $HOME_NET any ( \
+    msg:"MailHog UI response (Server: MailHog)"; \
+    flow:to_client,established; \
+    http.header; content:"Server|3a| MailHog"; nocase; \
+    threshold:type limit, track by_dst, count 1, seconds 60; \
+    sid:1007002; rev:5; \
+)
+
+# ========== NMAP (EXTERNAL) ==========
+alert tcp $HOME_NET any -> $HOME_NET any ( \
+    msg:"RECON TCP SYN scan (external->LAN)"; \
+    flags:S; flow:stateless; \
+    threshold: type limit, track by_src, count 15, seconds 60; \
+    classtype:attempted-recon; sid:1007300; rev:10; \
+)
+alert icmp $HOME_NET any -> $HOME_NET any ( \
+    msg:"RECON ICMP Echo sweep (external->LAN)"; \
+    itype:8; \
+    threshold: type limit, track by_src, count 5, seconds 60; \
+    classtype:attempted-recon; sid:1007301; rev:9; \
+)
+
+# ========== NMAP INTERNAL (SỬA LẠI count HỢP LÝ) ==========
+# 1. Bắt SYN Scan (Chỉ nổ 1 LẦN sau khi thấy 15 gói)
+alert tcp $HOME_NET any -> $HOME_NET any ( \
+    msg:"ET RECON Nmap TCP SYN scan (internal)"; \
+    flags:S; flow:stateless; \
+    threshold: type limit, track by_src, count 15, seconds 60; \
+    classtype:attempted-recon; sid:1101500; rev:7; \
+)
+# 2. Bắt Nmap -sV User-Agent (Chỉ nổ 1 LẦN sau khi thấy 1 gói)
+alert tcp $HOME_NET any -> $HOME_NET any ( \
+    msg:"ET RECON Nmap -sV Version Scan (Nmap UA)"; \
+    flow:to_server,established; \
+    content:"User-Agent|3a| Nmap"; nocase; \
+    threshold: type limit, track by_src, count 1, seconds 60; \
+    classtype:attempted-recon; sid:1101501; rev:3; \
+)
+# 3. Bắt Nmap -sV Empty PSH probe (Chỉ nổ 1 LẦN sau khi thấy 1 gói)
+alert tcp $HOME_NET any -> $HOME_NET any ( \
+    msg:"ET RECON Nmap -sV Version Scan (Empty PSH probe)"; \
+    flow:to_server,established; \
+    flags:PA; dsize:0; \
+    threshold: type limit, track by_src, count 1, seconds 60; \
+    classtype:attempted-recon; sid:1101502; rev:3; \
+)
+# 4. Bắt Ping Sweep (Chỉ nổ 1 LẦN sau khi thấy 5 gói)
+alert icmp $HOME_NET any -> $HOME_NET any ( \
+    msg:"RECON ICMP Echo sweep (internal)"; \
+    itype:8; \
+    threshold: type limit, track by_src, count 5, seconds 60; \
+    classtype:attempted-recon; sid:1007303; rev:5; \
+)
+
+# winrm.rules - detect Evil-WinRM activity and command exec via WinRM HTTP (5985)
+# SIDs reserved: 2002000-2002002
+
+# 1) Detect WinRM client (Evil-WinRM uses "Microsoft WinRM Client" UA)
+alert http any any -> $HOME_NET 5985 ( \
+    msg:"WINRM client detected - Microsoft WinRM Client UA"; \
+    flow:to_server,established; \
+    http.header; content:"User-Agent|3a| Microsoft WinRM Client"; nocase; \
+    http.uri; content:"/wsman"; nocase; \
+    classtype:attempted-admin; sid:2002000; rev:1; \
+)
+
+# 3) Detect WinRM response containing stdout stream (command output from target)
+alert http any any -> $HOME_NET 5985 \
+    (msg:"WINRM request to /wsman"; \
+    flow:to_server,established; \
+    http.uri; content:"/wsman"; nocase; \
+    classtype:policy-violation; sid:2002002; rev:1;)
+
+alert http $HOME_NET 5985 -> any any \
+    (msg:"WINRM response contains stdout stream"; \
+    flow:to_client,established; \
+    pcre:"/<rsp:Stream\s+Name\s*=\s*\"stdout\"/is"; \
+    classtype:policy-violation; sid:2002003; rev:1;)
+
+
+# 2) Phiên đã MÃ HÓA bằng SPNEGO (multipart/encrypted)
+alert http any any -> $HOME_NET 5985 ( \
+    msg:"WINRM encrypted session (HTTP-SPNEGO multipart/encrypted)"; \
+    flow:to_server,established; \
+    http.header; content:"Content-Type|3a| multipart/encrypted"; nocase; \
+    http.header; content:"application/HTTP-SPNEGO-session-encrypted"; nocase; \
+    classtype:attempted-admin; sid:2002102; rev:1; \
+)
+
+# 3) SOAP request nằm trong multipart (dấu 'OriginalContent' trong BODY)
+alert http any any -> $HOME_NET 5985 ( \
+    msg:"WINRM SOAP request inside encrypted multipart (OriginalContent marker)"; \
+    flow:to_server,established; \
+    http.request_body; content:"OriginalContent|3a| type=application/soap+xml"; nocase; \
+    classtype:attempted-admin; sid:2002103; rev:1; \
+)
+
+# 4) Response 200 multipart/encrypted từ server (ngụ ý có hành động/đáp ứng)
+alert http $HOME_NET 5985 -> any any ( \
+    msg:"WINRM encrypted response (multipart/encrypted 200 OK)"; \
+    flow:to_client,established; \
+    http.response_line; content:"HTTP/1.1 200"; \
+    http.header; content:"Content-Type|3a| multipart/encrypted"; nocase; \
+    classtype:policy-violation; sid:2002104; rev:1; \
+)

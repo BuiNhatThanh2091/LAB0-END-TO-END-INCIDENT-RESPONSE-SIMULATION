@@ -1,0 +1,280 @@
+# ======================
+# /etc/vector/vector.yaml
+# (Bản Full Optimized - Đã fix Suricata + Thêm Drop Noise)
+# ======================
+
+# 1) SOURCE
+sources:
+  # --- Winlogbeat CỦA FEN (Giữ nguyên) ---
+  beats_in:
+    type: logstash
+    address: 0.0.0.0:5044
+
+  # --- Nguồn ZEEK (Giữ nguyên) ---
+  zeek_conn_in:
+    type: file
+    include: ["/opt/zeek/logs/current/conn*.log"]
+#    ignore_checkpoints: true
+    read_from: end
+#beginning
+    
+  # --- Nguồn Suricata (Giữ nguyên) ---
+  suricata_eve_log:
+    type: file
+    include: ["/var/log/suricata/eve.json"]
+#    ignore_checkpoints: true
+    read_from: end
+#beginning
+
+# 2) TRANSFORMS
+transforms:
+  # === Pipeline 1: Winlogbeat ===
+  keep_core:
+    type: filter
+    inputs: [beats_in]
+    # Giữ nguyên Event ID list của fen
+    condition: 'includes([4104, 1, 3, 11, 22, 4624, 4625, 4663], to_int(.winlog.event_id) ?? -1)'
+
+  drop_prompt:
+    type: filter
+    inputs: [keep_core]
+    condition: |
+      eid = to_int(.winlog.event_id) ?? 0;
+      if eid == 4104 {
+        txt = to_string(.winlog.event_data.ScriptBlockText) ?? "";
+        downcase(txt) != "prompt"
+      } else { true }
+
+  drop_common_noise:
+    type: filter
+    inputs: [drop_prompt]
+    condition: |
+      eid = to_int(.winlog.event_id) ?? 0;
+      if eid == 4104 {
+        txt = to_string(.winlog.event_data.ScriptBlockText) ?? "";
+        sbt = downcase(txt);
+        !(contains(sbt, "psreadline") ||
+          contains(sbt, "onedrive") ||
+          contains(sbt, "teams") ||
+          contains(sbt, "get-help") ||
+          contains(sbt, "set-strictmode"))
+      } else { true }
+
+  # (MỚI) Thêm filter để drop LogonType noise (như Service Logon)
+  drop_logon_noise:
+    type: filter
+    inputs: [drop_common_noise] # Nối vào chain
+    condition: |
+      eid = to_int(.winlog.event_id) ?? 0;
+      if eid == 4624 {
+        logon_type = to_string(.winlog.event_data.LogonType) ?? "";
+        # Drop LogonType 5 (Service), 4 (Batch), 7 (Unlock)
+        # Chỉ giữ lại LogonType 2 (Interactive), 3 (Network), 10 (RemoteInteractive)
+        !(logon_type == "5" || logon_type == "4" || logon_type == "7")
+      } else { true }
+
+  # (UPDATE) Thêm OS noise (TrustedInstaller, TiWorker) vào EID 1
+  drop_proc_noise:
+    type: filter
+    inputs: [drop_logon_noise] # Nối vào chain
+    condition: |
+      eid = to_int(.winlog.event_id) ?? 0;
+      if eid == 1 {
+        img = downcase(to_string(.winlog.event_data.Image) ?? "");
+
+        # (MỚI) Thêm các process noise của OS từ log của fen
+        is_os_noise = contains(img, "wermgr.exe") ||
+                      contains(img, "taskhostw.exe") ||
+                      contains(img, "slui.exe") ||
+                      contains(img, "sppextcomobj.exe") ||
+                      contains(img, "trustedinstaller.exe") || # <-- MỚI
+                      contains(img, "tiworker.exe");          # <-- MỚI
+        
+        if is_os_noise {
+          false # Drop (lọc bỏ)
+        } else {
+          # (FIX) Logic drop svchost
+          if contains(img, "svchost.exe") || contains(img, "wmiprvse.exe") {
+            false # Drop (lọc bỏ)
+          } else {
+            # Giữ nguyên logic drop noise trình duyệt/Office của fen
+            !( contains(img, "opera") ||
+               contains(img, "operagx") ||
+               contains(img, "chrome") ||
+               contains(img, "firefox") ||
+               contains(img, "msedge") ||
+               contains(img, "microsoftedgeupdate") ||
+               contains(img, "filecoauth") ||
+               contains(img, "onedrive") ||
+               contains(img, "gpupdate") ||
+               contains(img, "compattelrunner") )
+          }
+        }
+      } else { true }
+
+  # (FIX) Giữ nguyên logic 'Keep WinRM 5985'
+  drop_net_noise:
+    type: filter
+    inputs: [drop_proc_noise] # Nối vào chain
+    condition: |
+      eid = to_int(.winlog.event_id) ?? 0;
+      if eid == 3 {
+        img = downcase(to_string(.winlog.event_data.Image) ?? "");
+        src_ip    = to_string(.winlog.event_data.SourceIp) ?? "";
+        src_port = to_string(.winlog.event_data.SourcePort) ?? "";
+        dst_port = to_string(.winlog.event_data.DestinationPort) ?? "";
+        is_mdns = (src_ip == "224.0.0.251") || (dst_port == "5353") || (src_port == "5353");
+        is_browser = contains(img, "opera") || contains(img, "chrome") || contains(img, "firefox") || contains(img, "msedge");
+        is_onedrive = contains(img, "onedrive") || contains(img, "filecoauth");
+        is_httpport = (dst_port == "443") || (dst_port == "80") || (src_port == "443") || (src_port == "80");
+        is_winlogbeat = contains(img, "winlogbeat.exe") && dst_port == "5044";
+        is_winrm = (dst_port == "5985") || (src_port == "5985");
+
+        if contains(img, "svchost.exe") || contains(img, "wmiprvse.exe") {
+          if is_winrm {
+            true # KEEP WinRM
+          } else {
+            false # DROP svchost noise
+          }
+        } else {
+          !( is_mdns || is_winlogbeat || ((is_browser || is_onedrive) && is_httpport) )
+        }
+      } else { true }
+
+  # (UPDATE) Thêm OS DNS noise (wpad) vào EID 22
+  drop_dns_noise:
+    type: filter
+    inputs: [drop_net_noise] # Nối vào chain
+    condition: |
+      eid = to_int(.winlog.event_id) ?? 0;
+      if eid == 22 {
+        qn  = downcase(to_string(.winlog.event_data.QueryName) ?? "");
+        img = downcase(to_string(.winlog.event_data.Image) ?? "");
+
+        is_os_dns_noise = ends_with(qn, "ipv6.msftconnecttest.com") ||
+                          qn == "localdomain" ||
+                          starts_with(qn, "wpad."); # <-- MỚI (bắt wpad.localdomain)
+        
+        if is_os_dns_noise {
+          false # Drop (lọc bỏ)
+        } else {
+          # (FIX) Logic drop svchost
+          if contains(img, "svchost.exe") || contains(img, "wmiprvse.exe") {
+            false # Drop (lọc bỏ)
+          } else {
+            if contains(img, "opera") {
+              false
+            } else {
+              !( ends_with(qn, ".update.microsoft.com") ||
+                 ends_with(qn, ".windowsupdate.com") ||
+                 contains(qn, "v10.events.data.microsoft.com") ||
+                 contains(qn, "settings-win.data.microsoft.com") ||
+                 ends_with(qn, "time.windows.com") ||
+                 ends_with(qn, ".wdcp.microsoft.com") ||
+                 ends_with(qn, ".msedge.net") ||
+                 ends_with(qn, "autoupdate.opera.com") ||
+                 ends_with(qn, "speeddial.opera.com") )
+            }
+          }
+        }
+      } else { true }
+
+  # (GIỮ NGUYÊN) Trim fields của Winlogbeat
+  trim_fields:
+    type: remap
+    inputs: [drop_dns_noise] # Nối vào chain
+    source: |
+      .lab     = "soc-lab";
+      .scenario = "phish->recon->winrm->exfil->encrypt";
+      .host = { "name": .host.name };
+      .agent = { "version": .agent.version };
+      dest_ip = if exists(.winlog.event_data.DestinationIp) { .winlog.event_data.DestinationIp } else { .winlog.event_data.IpAddress };
+      .winlog = {
+        "channel":         .winlog.channel,
+        "event_id":        .winlog.event_id,
+        "record_id":       .winlog.record_id,
+        "provider_name":   .winlog.provider_name,
+        "user": {
+          "name":          .winlog.user.name,
+          "domain":        .winlog.user.domain
+        },
+        "event_data": {
+          "ScriptBlockText": .winlog.event_data.ScriptBlockText,
+          "CommandLine":     .winlog.event_data.CommandLine,
+          "Image":           .winlog.event_data.Image,
+          "TargetFilename":  .winlog.event_data.TargetFilename,
+          "SourceIp":        .winlog.event_data.SourceIp,
+          "IpAddress":       .winlog.event_data.IpAddress,
+          "SourcePort":      .winlog.event_data.SourcePort,
+          "LogonType":       .winlog.event_data.LogonType,
+          "DestinationIp":   dest_ip,
+          "DestinationPort": .winlog.event_data.DestinationPort,
+          "ObjectName":      .winlog.event_data.ObjectName,
+          "AccessMask":      .winlog.event_data.AccessMask
+        }
+      }
+
+  # === Pipeline 2: ZEEK (Giữ nguyên) ===
+  parse_zeek_json:
+    type: remap
+    inputs: [zeek_conn_in]
+    source: |
+      parsed, err = parse_json(.message)
+      if err != null { false } else { . = parsed }
+
+  zeek_normalize_keys:
+    type: remap
+    inputs: [parse_zeek_json]
+    source: |
+      .id = {
+        "orig_h": to_string(."id.orig_h") ?? "",
+        "resp_h": to_string(."id.resp_h") ?? ""
+      }
+
+  filter_zeek_traffic:
+    type: filter
+    inputs: [zeek_normalize_keys]
+    condition: |
+      (.id.orig_h == "10.10.10.129" && .id.resp_h == "10.10.10.130") ||
+      (.id.orig_h == "10.10.10.130" && .id.resp_h == "10.10.10.129")
+
+  # (FIX) === Pipeline 3: Suricata ===
+  # Đặt đúng vị trí (trong 'transforms') và Sửa typo
+  parse_suricata_json:
+    type: remap
+    inputs: [suricata_eve_log]
+    source: |
+      parsed, err = parse_json(.message) # <-- FIX: .message (không phải .messsage)
+      if err != null {false} else {. = parsed }
+  suricata_129_130_traffic:
+    type: filter
+    inputs: [parse_suricata_json]  # ví dụ: parse_suricata_json hoặc zeek_normalize_keys
+    condition: |
+      (.src_ip == "10.10.10.129" && .dest_ip == "10.10.10.130") ||
+      (.src_ip == "10.10.10.130" && .dest_ip == "10.10.10.129")
+
+# 3) SINKS
+sinks:
+  # Sink Winlogbeat (trỏ vào 'trim_fields')
+  file_out:
+    type: file
+    inputs: [trim_fields]
+    path: /var/log/vector/winlogbeat-debug.json
+    encoding:
+      codec: json
+
+  # Sink Zeek (trỏ vào 'filter_zeek_traffic')
+  zeek_filter_traffic:
+    type: file
+    inputs: [filter_zeek_traffic]
+    path: /var/log/vector/zeek_filter_traffic.json
+    encoding:
+      codec: json
+      
+  # Sink Suricata (trỏ vào 'parse_suricata_json')
+  suricata_traffic:
+    type: file
+    inputs: [suricata_129_130_traffic] # <-- FIX: Trỏ vào transform đã fix
+    path: /var/log/vector/suricata_traffic.json
+    encoding:
+      codec: json
