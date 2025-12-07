@@ -1,0 +1,55 @@
+"_time","host.name","user.name","event.code","winlog.event_data.CommandLine","winlog.event_data.ScriptBlockText"
+"2025-12-05T16:04:17.938+0000","DESKTOP-00OJS0K
+DESKTOP-00OJS0K",,"4104
+4104","null
+null","powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:26:02.172+0000","DESKTOP-00OJS0K
+DESKTOP-00OJS0K",,"4104
+4104","null
+null","powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:16:33.716+0000","DESKTOP-00OJS0K
+DESKTOP-00OJS0K",,"4104
+4104","null
+null","powershell -ExecutionPolicy Bypass -File .\encrypt1.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+powershell -ExecutionPolicy Bypass -File .\encrypt1.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:14:51.868+0000","DESKTOP-00OJS0K
+DESKTOP-00OJS0K",,"4104
+4104","null
+null","powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:10:20.197+0000","DESKTOP-00OJS0K
+DESKTOP-00OJS0K",,"4104
+4104","null
+null"," powershell -ExecutionPolicy Bypass -File .\encrypt1.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+ powershell -ExecutionPolicy Bypass -File .\encrypt1.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:05:47.991+0000","DESKTOP-00OJS0K
+DESKTOP-00OJS0K",,"4104
+4104","null
+null","Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass"
+"2025-11-16T07:36:03.087+0000","DESKTOP-00OJS0K
+DESKTOP-00OJS0K",,"4104
+4104","null
+null","powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:20:13.822+0000","DESKTOP-00OJS0K
+DESKTOP-00OJS0K",,"4104
+4104","null
+null","powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"

