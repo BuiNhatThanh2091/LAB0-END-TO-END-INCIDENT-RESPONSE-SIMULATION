@@ -1,0 +1,1 @@
+Sử dụng HYDRA kết hợp với các yếu tố thu thập được từ các thông tin qua Email , trang web ta sẽ lập ra một danh sách mà nạn nhân sẽ đặt Username && Password
