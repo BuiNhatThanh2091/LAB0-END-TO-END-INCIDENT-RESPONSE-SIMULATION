@@ -96,7 +96,7 @@ Môi trường lab được triển khai trên VMware Workstation với 3 máy �
                               │  • Timeline CSV    │
                               └────────────────────┘
 ```
-
+![soc_lab_architecture_final](diagrams/soc_lab_architecture_final.png)
 **Cấu trúc tấn công thực tế:**
 
 | Phase | Attacker Actions | Monitor Detection | Victim Impact |
@@ -201,8 +201,8 @@ Mô tả chi tiết cách các công cụ tương tác và xử lý dữ liệu 
 │  │         R8/R9: Upload/Download detection                        │  │
 │  │                                                                  │  │
 │  │  🔸 Layer 4: decision.py (Threshold Evaluation)                 │  │
-│  │     └─► Score ≥ 60 (non-WL) → BLOCK + EMAIL                     │  │
-│  │         Score ≥ 100 (WL)    → BLOCK + EMAIL                     │  │
+│  │     └─► Score ≥ 100 (non-WL) → BLOCK + EMAIL                     │  │
+│  │         Score ≥ 250 (WL)    → BLOCK + EMAIL                     │  │
 │  │                                                                  │  │
 │  │  🔸 Layer 5: response.py (Multi-layer Containment)              │  │
 │  │     ├─► Network: iptables -A INPUT -s IP -j DROP (Ubuntu)       │  │
@@ -225,7 +225,7 @@ Mô tả chi tiết cách các công cụ tương tác và xử lý dữ liệu 
 │  └──────────────────────────────────────────────────────────────────┘  │
 │                                                                         │
 └─────────────────────────────────────────────────────────────────────────┘
-
+![work_flow_Tech](diagrams/workflow_lab01-Page-1.png)
                                     ⚙️
                          Automated Workflow:
                          
