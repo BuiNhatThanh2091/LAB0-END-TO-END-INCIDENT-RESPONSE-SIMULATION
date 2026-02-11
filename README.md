@@ -225,7 +225,9 @@ Mô tả chi tiết cách các công cụ tương tác và xử lý dữ liệu 
 │  └──────────────────────────────────────────────────────────────────┘  │
 │                                                                         │
 └─────────────────────────────────────────────────────────────────────────┘
-![work_flow_Tech](diagrams/workflow_lab01-Page-1.png)
+
+![workflow_lab01_page_1](./diagrams/workflow_lab01_page_1.png)
+
                                     ⚙️
                          Automated Workflow:
                          
