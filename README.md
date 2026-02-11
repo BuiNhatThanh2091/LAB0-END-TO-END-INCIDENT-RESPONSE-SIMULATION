@@ -1234,6 +1234,7 @@ Xem thêm documentation chi tiết tại thư mục `docs/`:
 - [📖 Chương 8: Báo cáo phân tích & IOCs](docs/7-bao-cao-phan-tich-and-iocs-analysis-report.md)
 - [📖 Chương 9: Tổng kết & Hướng phát triển](docs/8-tong-ket-and-tai-nguyen-conclusion.md)
 
+Ngoài thư mục docs bạn có thể xem trên link HashNode của tôi: https://projectblue01.hashnode.space/lab-buleteam-01/v1.0?t=1770807879290
 ---
 
 ## 🤝 Contributing
@@ -1247,15 +1248,6 @@ Dự án này là một phần trong portfolio cá nhân, nhưng mọi góp ý/c
 - [ ] Performance benchmarks (stress testing với 10K events/s)
 
 ---
-
-## 📄 License
-
-Dự án này được phát hành dưới giấy phép **MIT License** - xem file [LICENSE](LICENSE) để biết thêm chi tiết.
-
-⚠️ **Disclaimer:** Dự án này chỉ dành cho mục đích **giáo dục và nghiên cứu**. Không sử dụng các kỹ thuật trong dự án này để tấn công hệ thống thực tế mà không có sự cho phép.
-
----
-
 ## 📞 Contact & Portfolio
 
 **Author:** Bùi Nhật Thành  
