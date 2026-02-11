@@ -1169,20 +1169,17 @@ python3 main.py
 
 ### **1. Splunk Dashboard - Real-time Monitoring**
 ![Splunk Dashboard](docs/images/splunk_dashboard.png)
+![Splunk Dashboard 1](docs/images/splunk_dashboard_1.png)
 *Real-time visibility vào network + endpoint events*
 
 ### **2. SOAR Auto-Block Trong Action**
-![SOAR Blocking](docs/images/soar_block.gif)
+![SOAR Blocking](docs/images/soar_block.png)
 *Từ alert → block trong <1 phút*
 
 ### **3. Email Alert Example**
 ![Email Alert](docs/images/email_alert.png)
 ![Email Alert with falid ssh](docs/images/email_alert_ssh.png)
 *Alert chi tiết gửi tới SOC team với IOCs + timeline*
-
-### **4. Attack Flow Visualization**
-![Attack Flow](docs/images/attack_flow.png)
-*Cyber Kill Chain timeline reconstruction*
 
 ---
 
