@@ -225,9 +225,6 @@ Mô tả chi tiết cách các công cụ tương tác và xử lý dữ liệu 
 │  └──────────────────────────────────────────────────────────────────┘  │
 │                                                                         │
 └─────────────────────────────────────────────────────────────────────────┘
-
-![workflow_lab01_page_1](./diagrams/workflow_lab01_page_1.png)
-
                                     ⚙️
                          Automated Workflow:
                          
@@ -236,7 +233,7 @@ Mô tả chi tiết cách các công cụ tương tác và xử lý dữ liệu 
          
                     🏆 Total MTTR: <20 giây
 ```
-
+![workflow_lab01_page_1](diagrams/workflow_lab01_page_1.png)
 **Trình tự hoạt động theo thời gian thực:**
 
 ```
