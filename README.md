@@ -233,7 +233,9 @@ Mô tả chi tiết cách các công cụ tương tác và xử lý dữ liệu 
          
                     🏆 Total MTTR: <20 giây
 ```
-![workflow_lab01_page_1](diagrams/workflow_lab01_page_1.png)
+
+![workflow_lab01_page_1](diagrams/workflow_lab01-Page-1.png)
+
 **Trình tự hoạt động theo thời gian thực:**
 
 ```
