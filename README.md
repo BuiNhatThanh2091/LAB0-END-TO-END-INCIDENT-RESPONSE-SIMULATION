@@ -169,7 +169,7 @@ Mô tả chi tiết cách các công cụ tương tác và xử lý dữ liệu 
 │  ├──────────────────────────────────────────────────────────────────┤  │
 │  │                                                                  │  │
 │  │              ┌────────────────────────────┐                     │  │
-│  │              │   Splunk Enterprise 9.x    │                     │  │
+│  │              │   Splunk free 9.x    │                     │  │
 │  │              │   • 3 Indexes:             │                     │  │
 │  │              │     - network (Zeek/Suri)  │                     │  │
 │  │              │     - windows (Winlogbeat) │                     │  │
@@ -1037,7 +1037,7 @@ rule Ransomware_Encrypt_Script {
 ### **Detection & Monitoring Layer**
 | Component | Role | Technology |
 |-----------|------|------------|
-| **SIEM** | Central log aggregator | Splunk Enterprise 9.x |
+| **SIEM** | Central log aggregator | Splunk free 9.x |
 | **NIDS** | Network traffic inspection | Suricata 7.x + Zeek 6.x |
 | **EDR** | Endpoint telemetry | Sysmon 15.x + Winlogbeat 8.x |
 | **Log Pipeline** | Filter & transform | Vector 0.37.x |
